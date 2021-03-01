@@ -1,0 +1,89 @@
+<mat-accordion class="example-headers-align">
+  <mat-expansion-panel [expanded]="step === 0" (opened)="setStep(0)" hideToggle>
+    <mat-expansion-panel-header class="expansion_header">
+      <mat-panel-title class="expansion_title">
+        Destination
+      </mat-panel-title>
+      <mat-panel-description>
+        <mat-icon class="expansion_icon">map</mat-icon>
+      </mat-panel-description>
+    </mat-expansion-panel-header>
+
+    <mat-form-field>
+      <mat-label>To</mat-label>
+      <input matInput [(ngModel)]="destination">
+    </mat-form-field>
+    <mat-action-row>
+      <button mat-button color="primary" (click)="nextStep()">Next</button>
+    </mat-action-row>
+  </mat-expansion-panel>
+
+  <mat-expansion-panel [expanded]="step === 1" (opened)="setStep(1)" hideToggle>
+    <mat-expansion-panel-header>
+      <mat-panel-title>
+        Start date
+      </mat-panel-title>
+      <mat-panel-description>
+        <mat-icon>date_range</mat-icon>
+      </mat-panel-description>
+    </mat-expansion-panel-header>
+
+    <mat-form-field>
+      <mat-label>Start</mat-label>
+      <input matInput [matDatepicker]="picker" [(ngModel)]="startDate" (focus)="picker.open()" readonly>
+    </mat-form-field>
+    <mat-datepicker #picker></mat-datepicker>
+
+    <mat-action-row>
+      <button mat-button color="warn" (click)="prevStep()">Previous</button>
+      <button mat-button color="primary" (click)="nextStep()">Next</button>
+    </mat-action-row>
+  </mat-expansion-panel>
+
+  <mat-expansion-panel [expanded]="step === 2" (opened)="setStep(2)" hideToggle>
+    <mat-expansion-panel-header>
+      <mat-panel-title>
+        No. of nights
+      </mat-panel-title>
+      <mat-panel-description>
+        <mat-icon>nights_stay</mat-icon>
+      </mat-panel-description>
+    </mat-expansion-panel-header>
+
+    <mat-form-field>
+      <mat-label>Min</mat-label>
+      <input matInput [(ngModel)]="nights" type="number" min="1">
+    </mat-form-field>
+
+    <mat-action-row>
+      <button mat-button color="warn" (click)="prevStep()">Previous</button>
+      <button mat-button color="primary" (click)="nextStep()">Next</button>
+    </mat-action-row>
+  </mat-expansion-panel>
+
+  <mat-expansion-panel [expanded]="step === 3" (opened)="setStep(3)" hideToggle>
+    <mat-expansion-panel-header>
+      <mat-panel-title>
+        Budget
+      </mat-panel-title>
+      <mat-panel-description>
+        <mat-icon>money</mat-icon>
+      </mat-panel-description>
+    </mat-expansion-panel-header>
+
+    <mat-form-field>
+      <mat-label>Min (per person)</mat-label>
+      <input matInput [(ngModel)]="budgetRangeMin">
+    </mat-form-field>
+    <mat-form-field>
+      <mat-label>Max (per person)</mat-label>
+      <input matInput [(ngModel)]="budgetRangeMax">
+    </mat-form-field>
+
+    <mat-action-row>
+      <button mat-button color="warn" (click)="prevStep()">Previous</button>
+      <button mat-button color="primary" (click)="addTripOption()">Done</button>
+    </mat-action-row>
+  </mat-expansion-panel>
+
+</mat-accordion>

@@ -1,0 +1,20 @@
+<div *ngIf="tripOption; else elseBlock">
+  <h2>{{tripOption.destination}}</h2>
+  <h4>From {{tripOption.startDate | date}} for {{tripOption.nights}} {{timeFrame}}</h4>
+  <p>{{tripOption.budgetRangeMin}}-{{tripOption.budgetRangeMax}}</p>
+</div>
+<ng-template #elseBlock>
+  <div *ngIf="clicked; else addBlock">
+    <form class="trip_option_form">
+      <app-create-trip-accordion (newTripOptionEvent)="addTripOption($event)"></app-create-trip-accordion>
+      <button *ngIf="!confirmed; else confirmedBlock" class="confirm_btn" mat-raised-button color="accent">Confirm</button>
+    </form>
+    <ng-template #confirmedBlock></ng-template>
+  </div>
+  <ng-template #addBlock>
+    <div class="add_block">
+      <h3>Add a variant to your trip</h3>
+      <button mat-stroked-button color="primary" class="add_option_btn" (click)="btnClicked()">Add +</button>
+    </div>
+  </ng-template>
+</ng-template>

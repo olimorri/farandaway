@@ -1,0 +1,7 @@
+.header_title {
+  font-size: 24px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 15px 0px;
+}
