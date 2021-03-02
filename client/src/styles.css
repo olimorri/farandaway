@@ -80,27 +80,12 @@ p {
   outline: none;
 }
 
-.trip_title {
-  font-weight: 700;
-  font-size: 36px;
-  line-height: 42px;
-  margin: 10px;
-}
-
-.trip_subtitle {
-  font-weight: 300;
-  font-size: 24px;
-  line-height: 32px;
-  width: 80%;
-  margin: 20px;
-}
-
 .trip_option_container_small {
   border: 1px solid black;
   border-radius: 25px;
   background: #ffffff;
   box-sizing: border-box;
-  width: 100%;
+  width: 80%;
   max-width: 500px;
   padding: 10px;
   margin: 10px auto;
@@ -108,6 +93,8 @@ p {
 
 .trip_option_image {
   width: 100%;
+  margin: -10px;
+  border-radius: 25px 25px 0px 0px;
 }
 
 .trip_option_label_small {
@@ -125,4 +112,20 @@ p {
   font-weight: 700;
   font-size: 18px;
   line-height: 21px;
+}
+
+.trip_title {
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 42px;
+  margin: 10px;
+  text-align: center;
+}
+
+.trip_subtitle {
+  font-weight: 300;
+  font-size: 24px;
+  line-height: 32px;
+  width: 80%;
+  margin: 20px;
 }
