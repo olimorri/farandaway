@@ -1,11 +1,11 @@
-<div class="trip_title_card">
-  <h2 class="trip_title">Pack your bags! 🎒</h2>
-  <p class="trip_subtitle">First thing's first, give your trip a name and tell us what city you're leaving from.</p>
-  <form class="form_flex_column" (submit)="addTripInfo(info)">
+<div class="flex_col col_hor_center col_vert_center height_three_four">
+  <h2 class="trip_title text_center">Pack your bags! 🎒</h2>
+  <p class="trip_subtitle text_center">First thing's first, give your trip a name and tell us what city you're leaving from.</p>
+  <form class="flex_col" (submit)="addTripInfo(info)">
     <input class="text_input_large" type="text" matInput [(ngModel)]="info.title" name="title" required 
       placeholder="Enter trip name" #newTitle/>
     <input class="text_input_large" type="text" matInput [(ngModel)]="info.origin" name="origin" required
       placeholder="Start trip from" #newTitle/>
-    <button class="btn_medium" type="submit" mat-raised-button color="primary">Get started</button>
+    <button class="btn_medium" type="submit" btn_medium>Get started</button>
   </form>
 </div>

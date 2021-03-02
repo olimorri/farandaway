@@ -1,7 +1,9 @@
-<div *ngIf="tripOption; else elseBlock">
-  <h2>{{tripOption.destination}}</h2>
-  <h4>From {{tripOption.startDate | date}} for {{tripOption.nights}} {{timeFrame}}</h4>
-  <p>{{tripOption.budgetRangeMin}}-{{tripOption.budgetRangeMax}}</p>
+<div *ngIf="tripOption; else elseBlock" class="flex_col">
+  <img alt="Hero-pic">
+  <p class="trip_option_label_small">Trip 1</p>
+  <h2 trip_option_destination>{{tripOption.destination}}</h2>
+  <p>{{tripOption.startDate | date}} for {{tripOption.nights}} {{timeFrame}}</p>
+  <p>£{{tripOption.budgetRangeMin}} - £{{tripOption.budgetRangeMax}}pp</p>
 </div>
 <ng-template #elseBlock>
   <div *ngIf="clicked; else addBlock">
@@ -12,9 +14,9 @@
     <ng-template #confirmedBlock></ng-template>
   </div>
   <ng-template #addBlock>
-    <div class="add_block">
-      <h3>Add a variant to your trip</h3>
-      <button mat-stroked-button color="primary" class="add_option_btn" (click)="btnClicked()">Add +</button>
+    <div>
+      <p>Add a variant to your trip</p>
+      <button class="btn_trip_add" (click)="btnClicked()">+</button>
     </div>
   </ng-template>
 </ng-template>

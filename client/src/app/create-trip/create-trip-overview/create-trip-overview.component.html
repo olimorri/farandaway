@@ -1,11 +1,11 @@
-<div class="create_trip_dashboard_container flex_column">
-  <div class="trip_dashboard_title">
-    <h1>{{tripTitle}}</h1>
+<div class="flex_col">
+  <div>
+    <h1 class="trip_title">{{tripTitle}}</h1>
   </div>
-  <div class="create_trip_options_container">
-    <app-create-trip-option class="create_trip_option" (newTripOptionEvent)="addTripOption($event)"></app-create-trip-option>
-    <app-create-trip-option class="create_trip_option" (newTripOptionEvent)="addTripOption($event)"></app-create-trip-option>
-    <app-create-trip-option class="create_trip_option" (newTripOptionEvent)="addTripOption($event)"></app-create-trip-option>
+  <div class="flex_col col_hor_center col_vert_center">
+    <app-create-trip-option class="trip_option_container_small text_center" (newTripOptionEvent)="addTripOption($event)"></app-create-trip-option>
+    <app-create-trip-option class="trip_option_container_small text_center" (newTripOptionEvent)="addTripOption($event)"></app-create-trip-option>
+    <app-create-trip-option class="trip_option_container_small text_center" (newTripOptionEvent)="addTripOption($event)"></app-create-trip-option>
   </div>
-  <button class="create_trip_btn" mat-raised-button color="primary">Create Trip</button>
+  <button class="btn_medium">Create Trip</button>
 </div>

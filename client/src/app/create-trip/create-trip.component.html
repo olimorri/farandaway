@@ -1,5 +1,5 @@
-<div class="create_trip_form_container">
-  <app-create-trip-overview class="trip_title" *ngIf="tripTitle; else createTitle" [tripTitle]="tripTitle" [tripOrigin]="tripOrigin"></app-create-trip-overview>
+<div class="flex_col">
+  <app-create-trip-overview class="flex_col col_hor_center col_vert_center" *ngIf="tripTitle; else createTitle" [tripTitle]="tripTitle" [tripOrigin]="tripOrigin"></app-create-trip-overview>
   <ng-template #createTitle>
       <app-create-trip-initial-info (newInfoEvent)="addInfo($event)"></app-create-trip-initial-info>
   </ng-template>
