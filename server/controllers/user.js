@@ -17,7 +17,7 @@ exports.createUser = async (req,res) => {
 exports.getUsers = async (req, res) => {
   try {
     const users = await user.findAll({
-      include: [trip]
+      include: { model: trip, include: {model: option} }
     });
     res.status(200);
     res.send(users);
@@ -26,6 +26,8 @@ exports.getUsers = async (req, res) => {
     res.sendStatus(500);
   }
 }
+
+//User.findAll({ include: { all: true, nested: true }});
 
 exports.createTrip = async (req, res) => {
   const { title , userId } = req.body;
