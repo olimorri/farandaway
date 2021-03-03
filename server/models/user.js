@@ -17,5 +17,10 @@ module.exports = (sequelize, DataTypes) => {
       allowNull: false
     }
   });
+  
+  User.associate = model => {
+    User.hasMany(model.trip) //trip - this always needs to be the lowercase name
+  };
+
   return User;
 };
