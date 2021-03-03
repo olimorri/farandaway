@@ -8,7 +8,7 @@ import { TripOption } from '../interfaces/trip-option';
 })
 export class CreateTripComponent implements OnInit {
 
-  tripTitle: string = "Oliver's 30th Trip";
+  tripTitle: string = "Oliver's Trip 🌍";
   tripOrigin: string = '';
   tripOptions: [TripOption] | [] = [];
   
