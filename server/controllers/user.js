@@ -31,11 +31,26 @@ exports.getUsers = async (req, res) => {
 //User.findAll({ include: { all: true, nested: true }});
 
 exports.createTrip = async (req, res) => {
-  const { title , userId } = req.body;
+  const { title, options } = req.body;
+  const userId = req.params.userId;
   try {
     const newTrip = await trip.create({
       title,
       userId
+    })
+    options.map(newOption => {
+      const { title , destination, budgetRangeMin, budgetRangeMax, startDate, nights, isChosen } = newOption
+      const tripId = newTrip.id;
+      const addOption = option.create({
+        title,
+        destination,
+        budgetRangeMin,
+        budgetRangeMax,
+        startDate,
+        nights,
+        isChosen,
+        tripId
+      })
     })
     res.send(newTrip);
     res.status(200);
@@ -60,12 +75,13 @@ exports.getTrips = async (req, res) => {
 
 exports.createOption = async (req, res) => {
   console.log(req.body)
-  const { title , destination, budgetRange, startDate, nights, isChosen , tripId } = req.body;
+  const { title , destination, budgetRangeMin, budgetRangeMax, startDate, nights, isChosen , tripId } = req.body;
   try {
     const newOption = await option.create({
       title,
       destination,
-      budgetRange,
+      budgetRangeMin,
+      budgetRangeMax,
       startDate,
       nights,
       isChosen,

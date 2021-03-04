@@ -9,7 +9,7 @@ router.get('/users', getUsers);
 router.post('/users', createUser)
 
 //Trips
-router.post('/trips', createTrip);
+router.post('/trips/:userId', createTrip);
 router.get('/trips', getTrips);
 
 //Options

@@ -8,7 +8,11 @@ module.exports = (sequelize, DataTypes) => {
       type: DataTypes.STRING,
       allowNull: false
     }, 
-    budgetRange: {
+    budgetRangeMin: {
+      type : DataTypes.STRING,
+      allowNull: false
+    },
+    budgetRangeMax: {
       type : DataTypes.STRING,
       allowNull: false
     },
