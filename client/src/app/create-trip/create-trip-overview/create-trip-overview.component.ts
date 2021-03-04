@@ -11,6 +11,7 @@ export class CreateTripOverviewComponent implements OnInit {
   @Input() tripTitle: string | undefined;
   @Input() tripOrigin: string | undefined;
   tripOptions: TripOption[] = [];
+  tripOptionTitles: string[] = ["Option 1", "Option 2", "Option 3"]
 
   constructor() { }
 

@@ -10,7 +10,7 @@ export class CreateTripComponent implements OnInit {
 
   tripTitle: string = "Oliver's Trip 🌍";
   tripOrigin: string = '';
-  tripOptions: [TripOption] | [] = [];
+  tripOptions: TripOption[] | [] = [];
   
 
   constructor() { }

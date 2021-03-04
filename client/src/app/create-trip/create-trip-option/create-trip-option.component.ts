@@ -1,5 +1,5 @@
 import { InvokeFunctionExpr } from '@angular/compiler';
-import { Component, EventEmitter, OnInit, Output } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { TripOption } from 'src/app/interfaces/trip-option';
 
 @Component({
@@ -9,9 +9,10 @@ import { TripOption } from 'src/app/interfaces/trip-option';
 })
 export class CreateTripOptionComponent implements OnInit {
 
+  @Input() optionTitle: string = '';
+
   tripOption: TripOption | undefined;
   clicked : boolean = false;
-  confirmed: boolean = true;
   timeFrame: string = 'nights';
 
   constructor() { }
@@ -27,7 +28,6 @@ export class CreateTripOptionComponent implements OnInit {
 
   addTripOption(newTripOption: TripOption) {
     this.tripOption = newTripOption;
-    this.confirmed = false;
     if (this.tripOption.nights === 1) {
       this.timeFrame = 'night'
     }

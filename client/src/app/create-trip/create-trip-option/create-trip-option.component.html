@@ -1,6 +1,6 @@
 <div *ngIf="tripOption; else elseBlock" class="flex_col col_vert_center text_center">
   <img alt="Hero-pic">
-  <p class="trip_option_label_small">Trip 1</p>
+  <p class="trip_option_label_small">{{optionTitle}}</p>
   <h2 trip_option_destination>{{tripOption.destination}}</h2>
   <p>{{tripOption.startDate | date}} for {{tripOption.nights}} {{timeFrame}}</p>
   <p>£{{tripOption.budgetRangeMin}} - £{{tripOption.budgetRangeMax}}pp</p>
@@ -8,10 +8,8 @@
 <ng-template #elseBlock>
   <div *ngIf="clicked; else addBlock">
     <form class="trip_option_form">
-      <app-create-trip-accordion (newTripOptionEvent)="addTripOption($event)"></app-create-trip-accordion>
-      <button *ngIf="!confirmed; else confirmedBlock" class="confirm_btn" mat-raised-button color="accent">Confirm</button>
+      <app-create-trip-accordion [title]="optionTitle" (newTripOptionEvent)="addTripOption($event)"></app-create-trip-accordion>
     </form>
-    <ng-template #confirmedBlock></ng-template>
   </div>
   <ng-template #addBlock>
     <div>
