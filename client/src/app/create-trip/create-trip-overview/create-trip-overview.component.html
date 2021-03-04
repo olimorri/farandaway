@@ -5,5 +5,5 @@
   <div class="flex_col col_hor_center col_vert_center">
     <app-create-trip-option *ngFor="let optionTitle of tripOptionTitles" class="trip_option_container_small text_center" [optionTitle]="optionTitle" (newTripOptionEvent)="addTripOption($event)"></app-create-trip-option>
   </div>
-  <button class="btn_medium">Create Trip</button>
+  <button class="btn_medium" (click)="postTrip()">Create Trip</button>
 </div>

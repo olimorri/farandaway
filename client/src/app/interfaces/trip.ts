@@ -1,5 +1,6 @@
+import { TripOption } from "./trip-option";
+
 export interface Trip {
-  tripId:  number,
   title: string,
-  option: []
+  options: TripOption[]
 }

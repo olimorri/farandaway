@@ -1,5 +1,8 @@
 import { Component, OnInit } from '@angular/core';
+
 import { TripOption } from '../interfaces/trip-option';
+
+
 
 @Component({
   selector: 'app-create-trip',
@@ -8,7 +11,7 @@ import { TripOption } from '../interfaces/trip-option';
 })
 export class CreateTripComponent implements OnInit {
 
-  tripTitle: string = "Oliver's Trip 🌍";
+  tripTitle: string = "";
   tripOrigin: string = '';
   tripOptions: TripOption[] | [] = [];
   
