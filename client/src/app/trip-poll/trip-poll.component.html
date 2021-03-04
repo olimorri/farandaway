@@ -1,2 +1,36 @@
-<p>trip-poll works!</p>
-<h1>{{id}}</h1>
+<div *ngIf="trip" class="flex-col margin_none">
+  <h1 class="title_shadow">{{trip.title}}</h1>
+  <div class="voting_container">
+    <div class="flex_col trip_option_container_large" *ngFor="let option of trip.options">
+      <div>
+        <p class="trip_option_label_large">{{option.title}}</p>
+      </div>
+      <div class="img_placeholder">
+      </div>
+      <div class="option_info">
+        <div class="padding_left_small">
+          <p class="trip_option_destination">{{option.destination}}</p>
+          <p>{{option.startDate | date }}</p>
+          <p>£{{option.budgetRangeMin}} - {{option.budgetRangeMax}}</p>
+        </div>
+      </div>
+      <div class="option_info">
+        <div class="padding_left_small">
+          <p class="trip_option_subtitle">Cheapest return flight:</p>
+          <p>£{{option.budgetRangeMin}}</p>
+        </div>
+      </div>
+      <div class="option_info_small flex_row">
+        <div class="padding_left_small border_right half_width">
+          <p class="trip_option_subtitle">Avg temp:</p>
+          <p>£{{option.budgetRangeMin}}</p>
+        </div>
+        <div class="padding_left_small half_width">
+          <p class="trip_option_subtitle">Avg dinner:</p>
+          <p>£{{option.budgetRangeMin}}</p>
+        </div>
+      </div>
+      <button class="btn_vote">Cast your vote</button>
+    </div>
+  </div>
+</div>

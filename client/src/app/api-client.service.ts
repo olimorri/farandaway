@@ -19,4 +19,9 @@ export class ApiClientService {
     const headers = { 'Content-Type': 'application/json'}
     return this.http.post<Trip>(url, body, {headers, "observe": "body"})
   }
+
+  getTrip(id: number) : Observable<any> {
+    const url = `${this.baseUrl}/trips/${id}`
+    return this.http.get(url)
+  }
 }
