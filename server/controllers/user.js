@@ -18,6 +18,7 @@ exports.getUsers = async (req, res) => {
   try {
     const users = await user.findAll({
       include: { model: trip, include: {model: option} }
+      // include: { model: trip, required: true, include: {model: option} } - this is the option for retrieving only users that include trips
     });
     res.status(200);
     res.send(users);
