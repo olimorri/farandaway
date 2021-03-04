@@ -13,6 +13,8 @@ import { CreateTripInitialInfoComponent } from './create-trip/create-trip-initia
 import { CreateTripOverviewComponent } from './create-trip/create-trip-overview/create-trip-overview.component';
 import { CreateTripOptionComponent } from './create-trip/create-trip-option/create-trip-option.component';
 import { CreateTripAccordionComponent } from './create-trip/create-trip-accordion/create-trip-accordion.component';
+import { TripPollComponent } from './trip-poll/trip-poll.component';
+import { TripPollVotingComponent } from './trip-poll/trip-poll-voting/trip-poll-voting.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +24,9 @@ import { CreateTripAccordionComponent } from './create-trip/create-trip-accordio
     CreateTripInitialInfoComponent,
     CreateTripOverviewComponent,
     CreateTripOptionComponent,
-    CreateTripAccordionComponent
+    CreateTripAccordionComponent,
+    TripPollComponent,
+    TripPollVotingComponent
   ],
   imports: [
     BrowserModule,

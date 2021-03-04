@@ -13,7 +13,7 @@ export class ApiClientService {
 
   constructor(private http: HttpClient) { }
 
-  postTrip(trip: Trip) : Observable<Trip> {
+  postTrip(trip: Trip) : Observable<any> {
     const url = `${this.baseUrl}/trips/1`;
     const body = JSON.parse(JSON.stringify(trip));
     const headers = { 'Content-Type': 'application/json'}
