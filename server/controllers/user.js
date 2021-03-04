@@ -73,6 +73,23 @@ exports.getTrips = async (req, res) => {
   }
 }
 
+exports.getTrip = async (req, res) => {
+  const tripId = req.params.tripId;
+  try {
+    const trips = await trip.findAll({
+      where: {
+        id: tripId
+      },
+      include: [option]
+    });
+    res.status(200);
+    res.send(trips);
+  } catch (err) {
+    console.log(err)
+    res.sendStatus(500);
+  }
+}
+
 exports.createOption = async (req, res) => {
   console.log(req.body)
   const { title , destination, budgetRangeMin, budgetRangeMax, startDate, nights, isChosen , tripId } = req.body;
