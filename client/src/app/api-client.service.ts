@@ -4,6 +4,7 @@ import { Observable } from 'rxjs';
 
 import {Trip} from './interfaces/trip';
 import { CreateTripResponse } from './interfaces/create-trip-response';
+import { User } from './interfaces/user';
 
 @Injectable({
   providedIn: 'root'
@@ -19,6 +20,11 @@ export class ApiClientService {
     const body = JSON.parse(JSON.stringify(trip));
     const headers = { 'Content-Type': 'application/json'}
     return this.http.post<CreateTripResponse>(url, body, {headers, "observe": "body"})
+  }
+
+  getUser(id: number) : Observable<User[]> {
+    const url = `${this.baseUrl}/users/${id}`
+    return this.http.get<User[]>(url);
   }
 
   getTrip(id: number) : Observable<Trip[]> {
