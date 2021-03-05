@@ -122,7 +122,6 @@ exports.addVote = async (req, res) => {
         id: optionId
       }
     });
-    console.log(chosenOption);
     res.status(200);
     res.send(chosenOption);
 
