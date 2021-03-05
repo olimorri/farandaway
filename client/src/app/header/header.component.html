@@ -1,1 +1,9 @@
-<h1 class="header_title">far&away</h1>
+<div class="flex_row header_nav">
+  <h1 class="header_title">far&away</h1>
+  <div *ngIf="!loggedIn; else signedInBlock">
+    <button class="btn_header">Sign in</button>
+  </div>
+  <ng-template #signedInBlock>
+    <button class="btn_header">Account</button>
+  </ng-template>
+</div>

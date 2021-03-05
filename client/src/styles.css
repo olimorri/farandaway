@@ -14,6 +14,10 @@ body {
   border-right: solid black 1px;
 }
 
+.btn_header {
+  margin-right: 40px;
+}
+
 .btn_medium {
   background-color: #ff6a56;
   outline: none;
@@ -96,6 +100,15 @@ body {
 
 .half_width {
   width: 50%;
+}
+
+.header_nav {
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header_title {
+  margin-left: 40px;
 }
 
 .height_three_four {
