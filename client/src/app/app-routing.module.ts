@@ -1,11 +1,13 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { CreateTripOverviewComponent } from './create-trip/create-trip-overview/create-trip-overview.component';
 import { TripPollComponent } from './trip-poll/trip-poll.component'
 import { CreateTripComponent} from './create-trip/create-trip.component'
+import { UserDashboardComponent } from './user-dashboard/user-dashboard.component';
 
 const routes: Routes = [
+  {path: 'trips', component: CreateTripComponent},
   {path: '', component: CreateTripComponent},
+  {path: 'user', component: UserDashboardComponent},
   {path: 'trips/:tripId', component: TripPollComponent}
 ];
 

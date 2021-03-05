@@ -25,6 +25,7 @@ export class UserDashboardComponent implements OnInit {
     .subscribe(user => {
       this.user = user[0]
       if (this.user) this.trips = this.user.trips;
+      console.log(this.user.trips);
       
     })
 
