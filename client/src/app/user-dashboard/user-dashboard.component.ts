@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ApiClientService} from '../api-client.service';
+import { ActivatedRoute } from '@angular/router';
 
 import { Trip } from '../interfaces/trip';
 import { User } from '../interfaces/user';
@@ -11,23 +12,22 @@ import { User } from '../interfaces/user';
 })
 export class UserDashboardComponent implements OnInit {
 
-  constructor(private apiClientService: ApiClientService) { }
+  constructor(private route: ActivatedRoute, private apiClientService: ApiClientService) { }
 
   user: User | undefined;
   trips: Trip[] | undefined;
 
   ngOnInit(): void {
-    this.getUser(1);
+    const userId = this.route.snapshot.params.userId;
+    this.getUser(userId);
   }
 
   getUser(id: number) {
     this.apiClientService.getUser(id)
     .subscribe(user => {
       this.user = user[0]
-      if (this.user) this.trips = this.user.trips;
-      console.log(this.user.trips);
-      
+      if (this.user) this.trips = this.user.trips;      
+      if(!this.user) alert('hello');
     })
-
   }
 }

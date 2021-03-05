@@ -2,10 +2,12 @@
   <div class="flex_col col_hor_center dashboard_header"> 
     <h1 class="trip_title"> Hello {{user.firstName}}</h1>
     <p class="trip_subtitle text_center">Keep up to date with all your adventures and plan the next one too! 🧳</p>
-    <button class="btn_small half_width" routerLink="/trips" routerLinkActive="active">Create trip</button>
+    <button class="btn_small" routerLink="/trips" routerLinkActive="active">Create trip</button>
   </div>
-  <div *ngFor="let trip of trips" class="flex_row row_vert_center dashboard_trip">
-    <h4>{{trip.title}}</h4>
-    <button class="btn_trip_add" routerLink="/trips/{{trip.id}}">More info</button>
+  <div class="flex_col col_hor_center dashboard_trip_container">
+    <div *ngFor="let trip of trips" class="flex_row row_vert_center dashboard_trip">
+      <h4>{{trip.title}}</h4>
+      <button class="btn_trip_add" routerLink="/trips/{{trip.id}}">More info</button>
+    </div>
   </div>
 </div>

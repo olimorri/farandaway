@@ -1,5 +1,5 @@
 <div *ngIf="trip" class="flex-col margin_none">
-  <h1 class="title_shadow">{{trip.title}} {{tripId}}</h1>
+  <h1 class="title_shadow">{{trip.title}}</h1>
   <div class="voting_container">
     <div class="flex_col trip_option_container_large" *ngFor="let option of trip.options">
       <app-trip-poll-voting [option]="option" [tripId]="tripId"></app-trip-poll-voting>
