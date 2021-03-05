@@ -107,13 +107,17 @@ body {
   margin-top: 20px;
 }
 
+.dashboard_trip_container {
+  width: 80%;
+}
+
 .dashboard_trip {
   justify-content: space-between;
   border: 1px solid black;
   border-radius: 25px;
   background: #ffffff;
   box-sizing: border-box;
-  width: 80%;
+  width: 100%;
   max-width: 500px;
   padding: 10px;
   margin-top: 10px;
