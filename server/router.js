@@ -2,12 +2,13 @@
 
 const express = require('express');
 const router = express.Router();
-const { getUsers, createUser, createTrip, getTrips, createOption, getTrip, addVote, logUserIn } =  require('./controllers/user');
+const { getUsers, createUser, createTrip, getTrips, createOption, getTrip, addVote, getUser, userLogin } =  require('./controllers/user');
 
 //USERS
 router.get('/users', getUsers);
-router.post('/users', createUser)
-router.get('/users/:userId', logUserIn)
+router.post('/users', createUser);
+router.get('/users/:userId', getUser);
+router.get('/login/:emailAddress', userLogin);
 
 //Trips
 router.post('/trips/:userId', createTrip);

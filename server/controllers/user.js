@@ -30,7 +30,7 @@ exports.getUsers = async (req, res) => {
 }
 //User.findAll({ include: { all: true, nested: true }});
 
-exports.logUserIn = async (req, res) => {
+exports.getUser = async (req, res) => {
   const userId = req.params.userId;
   try {
     const users = await user.findAll({
@@ -40,6 +40,24 @@ exports.logUserIn = async (req, res) => {
       include: { 
         model: trip, 
         include: {model: option}
+      }
+    });
+    res.status(200);
+    res.send(users);
+  } catch (err) {
+    console.log(err)
+    res.sendStatus(500);
+  }
+}
+
+exports.userLogin = async (req, res) => {
+  console.log(req.params)
+  const { password } = req.headers;
+  const { emailAddress } = req.params;
+  try {
+    const users = await user.findAll({
+      where: {
+        emailAddress: emailAddress
       }
     });
     res.status(200);
