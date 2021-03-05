@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
-import { Number } from 'mongoose';
 import { ApiClientService } from '../api-client.service';
 import { Trip } from '../interfaces/trip';
 
@@ -26,7 +25,10 @@ export class TripPollComponent implements OnInit {
     this.apiClientService.getTrip(id)
     .subscribe(trip => {
       this.trip = trip[0];
+      if (this.trip.options) {
+        //sort options when they come through from db
+        this.trip.options.sort((a,b) => (a.title >= b.title ? 1 : -1))
+      }
     })
   }
-
 }
