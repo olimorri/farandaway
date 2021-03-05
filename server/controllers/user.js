@@ -28,8 +28,27 @@ exports.getUsers = async (req, res) => {
     res.sendStatus(500);
   }
 }
-
 //User.findAll({ include: { all: true, nested: true }});
+
+exports.logUserIn = async (req, res) => {
+  const userId = req.params.userId;
+  try {
+    const users = await user.findAll({
+      where: {
+        id: userId
+      },
+      include: { 
+        model: trip, 
+        include: {model: option}
+      }
+    });
+    res.status(200);
+    res.send(users);
+  } catch (err) {
+    console.log(err)
+    res.sendStatus(500);
+  }
+}
 
 exports.createTrip = async (req, res) => {
   const { title, options } = req.body;
