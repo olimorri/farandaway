@@ -25,4 +25,10 @@ export class ApiClientService {
     const url = `${this.baseUrl}/trips/${id}`
     return this.http.get<Trip[]>(url)
   }
+
+  vote(optionId: number | undefined) {
+    const url = `${this.baseUrl}/options/${optionId}`
+    console.log(url);
+    return this.http.put(url, null);
+  }
 }

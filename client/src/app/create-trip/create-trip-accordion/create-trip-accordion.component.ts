@@ -17,6 +17,7 @@ export class CreateTripAccordionComponent {
   nights: number = 1;
   budgetRangeMin: number = 200;
   budgetRangeMax: number = 800;
+  votes: number = 0;
   isChosen: boolean = false;
 
   addTripOption() {
@@ -27,6 +28,7 @@ export class CreateTripAccordionComponent {
       nights: this.nights,
       budgetRangeMin: this.budgetRangeMin,
       budgetRangeMax: this.budgetRangeMax,
+      votes: this.votes,
       isChosen: this.isChosen
     }
     this.newTripOptionEvent.emit(newTrip)

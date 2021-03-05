@@ -12,27 +12,20 @@ import { Trip } from '../interfaces/trip';
 export class TripPollComponent implements OnInit {
 
   constructor(private route: ActivatedRoute, private apiClientService: ApiClientService) { }
-  id : any = '';
+  tripId : any = '';
   trip: Trip | undefined;
   title: string | undefined;
 
   ngOnInit(): void {
    const tripId = this.route.snapshot.params.tripId;
-   this.id = tripId
+   this.tripId = tripId
    this.getTrip(tripId);
-
-    
-    // const tripId = this.route.queryParams.subscribe(params => {
-    //   console.log(params);
-    //   this.id= params['tripId'];
-    // })
   }
 
   getTrip(id: number) {
     this.apiClientService.getTrip(id)
     .subscribe(trip => {
       this.trip = trip[0];
-      this.title = trip[0].title;
     })
   }
 
