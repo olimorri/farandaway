@@ -24,6 +24,10 @@ module.exports = (sequelize, DataTypes) => {
       type: DataTypes.INTEGER,
       allowNull: false
     },
+    votes: {
+      type: DataTypes.INTEGER,
+      allowNull: true
+    },
     isChosen: {
       type: DataTypes.BOOLEAN,
       allowNull: false,

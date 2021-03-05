@@ -1,6 +1,7 @@
 'use-strict'
 
 const { user, trip, option } = require('../models');
+const { Op } = require('sequelize')
 
 exports.createUser = async (req,res) => {
   const { emailAddress, firstName, lastName, password } = req.body;
@@ -33,13 +34,14 @@ exports.getUsers = async (req, res) => {
 exports.createTrip = async (req, res) => {
   const { title, options } = req.body;
   const userId = req.params.userId;
+  console.log(options);
   try {
     const newTrip = await trip.create({
       title,
       userId
     })
     options.map(newOption => {
-      const { title , destination, budgetRangeMin, budgetRangeMax, startDate, nights, isChosen } = newOption
+      const { title , destination, budgetRangeMin, budgetRangeMax, startDate, nights, isChosen, votes } = newOption
       const tripId = newTrip.id;
       const addOption = option.create({
         title,
@@ -48,6 +50,7 @@ exports.createTrip = async (req, res) => {
         budgetRangeMax,
         startDate,
         nights,
+        votes,
         isChosen,
         tripId
       })
@@ -91,7 +94,6 @@ exports.getTrip = async (req, res) => {
 }
 
 exports.createOption = async (req, res) => {
-  console.log(req.body)
   const { title , destination, budgetRangeMin, budgetRangeMax, startDate, nights, isChosen , tripId } = req.body;
   try {
     const newOption = await option.create({
@@ -106,6 +108,41 @@ exports.createOption = async (req, res) => {
     })
     res.send(newOption);
     res.status(200);
+  } catch (err) {
+    console.log(err);
+    res.sendStatus(500);
+  }
+}
+
+// exports.addVote = async (req, res) => {
+//   const { title } = req.body;
+//   const {tripId } = req.params;
+//   const selectedTrip = await trip.findAll({
+//     where: {
+//       id: tripId
+//     },
+//     include: {
+//       model: option, where: {
+//         title: title
+//       }
+//     }
+//   });
+//   const selectedOptions = selectedTrip[0].dataValues.options;
+//   console.log(selectedTrip[0])
+// }
+
+exports.addVote = async (req, res) => {
+  const optionId = req.params.optionId;
+  try {
+    const chosenOption = await option.increment('votes',{
+      where: {
+        id: optionId
+      }
+    });
+    console.log(chosenOption);
+    res.status(200);
+    res.send(chosenOption);
+
   } catch (err) {
     console.log(err);
     res.sendStatus(500);
