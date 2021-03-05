@@ -51,7 +51,6 @@ exports.getUser = async (req, res) => {
 }
 
 exports.userLogin = async (req, res) => {
-  console.log(req.params)
   const { password } = req.headers;
   const { emailAddress } = req.params;
   try {
@@ -71,7 +70,6 @@ exports.userLogin = async (req, res) => {
 exports.createTrip = async (req, res) => {
   const { title, options } = req.body;
   const userId = req.params.userId;
-  console.log(options);
   try {
     const newTrip = await trip.create({
       title,
