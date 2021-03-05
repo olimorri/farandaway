@@ -16,6 +16,7 @@ import { CreateTripAccordionComponent } from './create-trip/create-trip-accordio
 import { TripPollComponent } from './trip-poll/trip-poll.component';
 import { TripPollVotingComponent } from './trip-poll/trip-poll-voting/trip-poll-voting.component';
 import { UserDashboardComponent } from './user-dashboard/user-dashboard.component';
+import { UserLoginComponent } from './user-login/user-login.component';
 
 @NgModule({
   declarations: [
@@ -28,7 +29,8 @@ import { UserDashboardComponent } from './user-dashboard/user-dashboard.componen
     CreateTripAccordionComponent,
     TripPollComponent,
     TripPollVotingComponent,
-    UserDashboardComponent
+    UserDashboardComponent,
+    UserLoginComponent
   ],
   imports: [
     BrowserModule,

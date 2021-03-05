@@ -5,6 +5,7 @@ import { Observable } from 'rxjs';
 import {Trip} from './interfaces/trip';
 import { CreateTripResponse } from './interfaces/create-trip-response';
 import { User } from './interfaces/user';
+import { UserLogin } from './interfaces/user-login';
 
 @Injectable({
   providedIn: 'root'
@@ -25,6 +26,12 @@ export class ApiClientService {
   getUser(id: number) : Observable<User[]> {
     const url = `${this.baseUrl}/users/${id}`
     return this.http.get<User[]>(url);
+  }
+
+  userLogin(email: string, password: string): Observable<User[]> {
+    const url = `${this.baseUrl}/login/${email}`
+    const headers = {password: password}
+    return this.http.get<User[]>(url, {headers});
   }
 
   getTrip(id: number) : Observable<Trip[]> {

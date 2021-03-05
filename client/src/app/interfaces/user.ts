@@ -1,12 +1,12 @@
 import { Trip } from './trip';
 
 export interface User {
-  id: number,
+  id?: number,
   emailAddress: string,
   firstName: string,
   lastName: string,
   password: string,
-  createdAt: string,
-  updatedAt: string,
-  trips: Trip[]
+  createdAt?: string,
+  updatedAt?: string,
+  trips?: Trip[]
 }

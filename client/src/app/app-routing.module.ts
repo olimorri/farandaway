@@ -3,12 +3,14 @@ import { RouterModule, Routes } from '@angular/router';
 import { TripPollComponent } from './trip-poll/trip-poll.component'
 import { CreateTripComponent} from './create-trip/create-trip.component'
 import { UserDashboardComponent } from './user-dashboard/user-dashboard.component';
+import { UserLoginComponent } from './user-login/user-login.component';
 
 const routes: Routes = [
+  {path: 'users/:userId', component: UserDashboardComponent},
+  {path: 'trips/:tripId', component: TripPollComponent},
+  {path: 'login', component: UserLoginComponent},
   {path: 'trips', component: CreateTripComponent},
   {path: '', component: CreateTripComponent},
-  {path: 'user', component: UserDashboardComponent},
-  {path: 'trips/:tripId', component: TripPollComponent}
 ];
 
 @NgModule({
