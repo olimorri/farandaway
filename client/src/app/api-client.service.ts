@@ -3,6 +3,7 @@ import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
 
 import {Trip} from './interfaces/trip';
+import { CreateTripResponse } from './interfaces/create-trip-response';
 
 @Injectable({
   providedIn: 'root'
@@ -13,15 +14,15 @@ export class ApiClientService {
 
   constructor(private http: HttpClient) { }
 
-  postTrip(trip: Trip) : Observable<any> {
+  postTrip(trip: Trip) : Observable<CreateTripResponse> {
     const url = `${this.baseUrl}/trips/1`;
     const body = JSON.parse(JSON.stringify(trip));
     const headers = { 'Content-Type': 'application/json'}
-    return this.http.post<Trip>(url, body, {headers, "observe": "body"})
+    return this.http.post<CreateTripResponse>(url, body, {headers, "observe": "body"})
   }
 
-  getTrip(id: number) : Observable<any> {
+  getTrip(id: number) : Observable<Trip[]> {
     const url = `${this.baseUrl}/trips/${id}`
-    return this.http.get(url)
+    return this.http.get<Trip[]>(url)
   }
 }
