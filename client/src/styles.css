@@ -39,7 +39,8 @@ body {
   border-radius: 0px 0px 24px 24px;
   border: none;
   padding: 15px 15px;
-  height: 60px;
+  height: 54px;
+  width: 100%;
   font-weight: 700;
   letter-spacing: 0.2px;
   font-size: 18px;
