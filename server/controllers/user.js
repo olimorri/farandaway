@@ -114,23 +114,6 @@ exports.createOption = async (req, res) => {
   }
 }
 
-// exports.addVote = async (req, res) => {
-//   const { title } = req.body;
-//   const {tripId } = req.params;
-//   const selectedTrip = await trip.findAll({
-//     where: {
-//       id: tripId
-//     },
-//     include: {
-//       model: option, where: {
-//         title: title
-//       }
-//     }
-//   });
-//   const selectedOptions = selectedTrip[0].dataValues.options;
-//   console.log(selectedTrip[0])
-// }
-
 exports.addVote = async (req, res) => {
   const optionId = req.params.optionId;
   try {
