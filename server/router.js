@@ -16,7 +16,7 @@ const {
 const { createFlight, getFlights } = require('./controllers/flight');
 const {
   createDestination,
-  getDestinations,
+  getDestination,
   deleteDestinations,
 } = require('./controllers/destination');
 
@@ -43,7 +43,7 @@ router.get('/flights', getFlights);
 
 //Destinations
 router.post('/destinations', createDestination);
-router.get('/destinations', getDestinations);
+router.get('/additionalInfo/:destinationName/:startDate', getDestination);
 router.delete('/destinations', deleteDestinations);
 
 module.exports = router;
