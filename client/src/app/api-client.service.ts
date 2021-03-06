@@ -4,6 +4,7 @@ import { Observable } from 'rxjs';
 
 import { Trip } from './interfaces/trip';
 import { CreateTripResponse } from './interfaces/create-trip-response';
+import { AdditionalTripInfo } from './interfaces/additional-trip-info';
 import { User } from './interfaces/user';
 
 @Injectable({
@@ -45,11 +46,8 @@ export class ApiClientService {
     return this.http.put(url, null);
   }
 
-  getAdditionalInfo(
-    startDate: string,
-    destination: string,
-  ): Observable<number[]> {
+  getAdditionalInfo(startDate: string, destination: string): Observable<any[]> {
     const url = `${this.baseUrl}/additionalInfo/${destination}/${startDate}`;
-    return this.http.get<number[]>(url);
+    return this.http.get<any[]>(url);
   }
 }

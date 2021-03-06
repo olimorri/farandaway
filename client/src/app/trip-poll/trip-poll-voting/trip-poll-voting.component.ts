@@ -14,6 +14,7 @@ export class TripPollVotingComponent implements OnInit {
 
   averageTemp: number = 0;
   hoursOfSun: number = 0;
+  heroImg: string = '';
   flightPrice: number = 0;
 
   constructor(private apiClientService: ApiClientService) {}
@@ -40,7 +41,8 @@ export class TripPollVotingComponent implements OnInit {
         .subscribe((info) => {
           this.averageTemp = info[0];
           this.hoursOfSun = info[1];
-          this.flightPrice = info[2];
+          this.heroImg = info[2];
+          this.flightPrice = info[3];
         });
     }
   }
