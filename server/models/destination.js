@@ -1,26 +1,25 @@
 module.exports = (sequelize, DataTypes) => {
-  const User = sequelize.define('user', {
-    emailAddress: {
+  const Destination = sequelize.define('destination', {
+    name: {
       type: DataTypes.STRING,
       allowNull: false,
     },
-    firstName: {
+    country: {
       type: DataTypes.STRING,
       allowNull: false,
     },
-    lastName: {
+    emoji: {
       type: DataTypes.STRING,
       allowNull: false,
     },
-    password: {
+    timezone: {
       type: DataTypes.STRING,
+      allowNull: false,
+    },
+    climate: {
+      type: DataTypes.ARRAY(DataTypes.JSON),
       allowNull: false,
     },
   });
-
-  User.associate = (model) => {
-    User.hasMany(model.trip); //trip - this always needs to be the lowercase name
-  };
-
-  return User;
+  return Destination;
 };

@@ -4,26 +4,35 @@ const { Sequelize } = require('sequelize');
 require('dotenv').config();
 const config = process.env;
 
-
- const sequelize = new Sequelize (config.DB_NAME, config.DB_USERNAME, config.DB_PASSWORD, {
-  host: config.DB_HOST,
-  dialect: config.DB_DIALECT,
-  port: config.DB_PORT
-});
+const sequelize = new Sequelize(
+  config.DB_NAME,
+  config.DB_USERNAME,
+  config.DB_PASSWORD,
+  {
+    host: config.DB_HOST,
+    dialect: config.DB_DIALECT,
+    port: config.DB_PORT,
+  },
+);
 
 const db = {};
 
-fs
-  .readdirSync(__dirname)
-  .filter(file => {
-    return (file.indexOf('.') !== 0) && (file !== 'index.js') && (file.slice(-3) === '.js');
+fs.readdirSync(__dirname)
+  .filter((file) => {
+    return (
+      file.indexOf('.') !== 0 && file !== 'index.js' && file.slice(-3) === '.js'
+    );
   })
-  .forEach(file => { // ['student.js']
-    const model = require(path.join(__dirname, file))(sequelize, Sequelize.DataTypes);
+  .forEach((file) => {
+    // ['student.js']
+    const model = require(path.join(__dirname, file))(
+      sequelize,
+      Sequelize.DataTypes,
+    );
     db[model.name] = model; // {Student: Model}
   });
 
-Object.keys(db).forEach(modelName => {
+Object.keys(db).forEach((modelName) => {
   if (db[modelName].associate) {
     db[modelName].associate(db);
   }

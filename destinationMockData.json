@@ -1,0 +1,770 @@
+[
+  {
+    "name": "Barcelona",
+    "country": "Spain",
+    "emoji": "🇪🇸",
+    "timezone": "GMT+1",
+    "climate": [
+      {
+        "tmax": "12.2",
+        "temp": "10.0",
+        "tmin": "7.3",
+        "accumulated_rain": "38.5",
+        "days_with_rain": "6",
+        "sun_hours": "9",
+        "rh": "76",
+        "TIME": "January"
+      },
+      {
+        "tmax": "12.4",
+        "temp": "10.2",
+        "tmin": "7.3",
+        "accumulated_rain": "36.8",
+        "days_with_rain": "6",
+        "sun_hours": "11",
+        "rh": "75",
+        "TIME": "February"
+      },
+      {
+        "tmax": "14.1",
+        "temp": "11.9",
+        "tmin": "9.0",
+        "accumulated_rain": "38.7",
+        "days_with_rain": "6",
+        "sun_hours": "11",
+        "rh": "77",
+        "TIME": "March"
+      },
+      {
+        "tmax": "15.8",
+        "temp": "13.6",
+        "tmin": "10.8",
+        "accumulated_rain": "45.1",
+        "days_with_rain": "8",
+        "sun_hours": "13",
+        "rh": "77",
+        "TIME": "April"
+      },
+      {
+        "tmax": "18.9",
+        "temp": "16.8",
+        "tmin": "14.2",
+        "accumulated_rain": "39.7",
+        "days_with_rain": "6",
+        "sun_hours": "15",
+        "rh": "79",
+        "TIME": "May"
+      },
+      {
+        "tmax": "22.6",
+        "temp": "20.6",
+        "tmin": "18.1",
+        "accumulated_rain": "30.7",
+        "days_with_rain": "5",
+        "sun_hours": "15",
+        "rh": "78",
+        "TIME": "June"
+      },
+      {
+        "tmax": "25.4",
+        "temp": "23.5",
+        "tmin": "21.0",
+        "accumulated_rain": "18.4",
+        "days_with_rain": "4",
+        "sun_hours": "15",
+        "rh": "77",
+        "TIME": "July"
+      },
+      {
+        "tmax": "26.0",
+        "temp": "24.1",
+        "tmin": "21.7",
+        "accumulated_rain": "40.8",
+        "days_with_rain": "6",
+        "sun_hours": "13",
+        "rh": "77",
+        "TIME": "August"
+      },
+      {
+        "tmax": "23.2",
+        "temp": "21.5",
+        "tmin": "19.1",
+        "accumulated_rain": "75.9",
+        "days_with_rain": "10",
+        "sun_hours": "13",
+        "rh": "75",
+        "TIME": "September"
+      },
+      {
+        "tmax": "20.0",
+        "temp": "18.3",
+        "tmin": "15.9",
+        "accumulated_rain": "89.5",
+        "days_with_rain": "10",
+        "sun_hours": "11",
+        "rh": "77",
+        "TIME": "October"
+      },
+      {
+        "tmax": "15.8",
+        "temp": "13.9",
+        "tmin": "11.3",
+        "accumulated_rain": "66.2",
+        "days_with_rain": "8",
+        "sun_hours": "10",
+        "rh": "75",
+        "TIME": "November"
+      },
+      {
+        "tmax": "12.9",
+        "temp": "10.9",
+        "tmin": "8.3",
+        "accumulated_rain": "41.7",
+        "days_with_rain": "6",
+        "sun_hours": "9",
+        "rh": "75",
+        "TIME": "December"
+      }
+    ]
+  },
+  {
+    "name": "Berlin",
+    "country": "Germany",
+    "emoji": "🇩🇪",
+    "timezone": "GMT+1",
+    "climate": [
+      {
+        "tmax": "3.2",
+        "temp": "1.0",
+        "tmin": "-1.3",
+        "accumulated_rain": "46.9",
+        "days_with_rain": "11",
+        "sun_hours": "8",
+        "rh": "84",
+        "TIME": "January"
+      },
+      {
+        "tmax": "4.7",
+        "temp": "1.8",
+        "tmin": "-1.0",
+        "accumulated_rain": "34.6",
+        "days_with_rain": "9",
+        "sun_hours": "10",
+        "rh": "80",
+        "TIME": "February"
+      },
+      {
+        "tmax": "8.6",
+        "temp": "4.9",
+        "tmin": "1.2",
+        "accumulated_rain": "45.7",
+        "days_with_rain": "11",
+        "sun_hours": "12",
+        "rh": "75",
+        "TIME": "March"
+      },
+      {
+        "tmax": "14.0",
+        "temp": "9.7",
+        "tmin": "4.8",
+        "accumulated_rain": "37.7",
+        "days_with_rain": "9",
+        "sun_hours": "14",
+        "rh": "68",
+        "TIME": "April"
+      },
+      {
+        "tmax": "18.9",
+        "temp": "14.5",
+        "tmin": "9.7",
+        "accumulated_rain": "53.1",
+        "days_with_rain": "10",
+        "sun_hours": "15",
+        "rh": "66",
+        "TIME": "May"
+      },
+      {
+        "tmax": "21.7",
+        "temp": "17.3",
+        "tmin": "12.8",
+        "accumulated_rain": "60.8",
+        "days_with_rain": "10",
+        "sun_hours": "17",
+        "rh": "67",
+        "TIME": "June"
+      },
+      {
+        "tmax": "23.9",
+        "temp": "19.6",
+        "tmin": "15.2",
+        "accumulated_rain": "77.4",
+        "days_with_rain": "11",
+        "sun_hours": "16",
+        "rh": "67",
+        "TIME": "July"
+      },
+      {
+        "tmax": "23.8",
+        "temp": "19.2",
+        "tmin": "15.1",
+        "accumulated_rain": "57.8",
+        "days_with_rain": "10",
+        "sun_hours": "15",
+        "rh": "68",
+        "TIME": "August"
+      },
+      {
+        "tmax": "19.0",
+        "temp": "14.8",
+        "tmin": "11.5",
+        "accumulated_rain": "48.1",
+        "days_with_rain": "9",
+        "sun_hours": "13",
+        "rh": "74",
+        "TIME": "September"
+      },
+      {
+        "tmax": "13.5",
+        "temp": "9.9",
+        "tmin": "7.2",
+        "accumulated_rain": "42.4",
+        "days_with_rain": "9",
+        "sun_hours": "11",
+        "rh": "80",
+        "TIME": "October"
+      },
+      {
+        "tmax": "7.5",
+        "temp": "5.0",
+        "tmin": "2.8",
+        "accumulated_rain": "44.6",
+        "days_with_rain": "10",
+        "sun_hours": "9",
+        "rh": "86",
+        "TIME": "November"
+      },
+      {
+        "tmax": "4.0",
+        "temp": "1.9",
+        "tmin": "-0.2",
+        "accumulated_rain": "48.1",
+        "days_with_rain": "11",
+        "sun_hours": "7",
+        "rh": "86",
+        "TIME": "December"
+      }
+    ]
+  },
+  {
+    "name": "New York",
+    "country": "United States of America",
+    "emoji": "🇺🇸",
+    "timezone": "GMT-5",
+    "climate": [
+      {
+        "tmax": "3.0",
+        "temp": "-0.5",
+        "tmin": "-4.2",
+        "accumulated_rain": "83.6",
+        "days_with_rain": "9",
+        "sun_hours": "9",
+        "rh": "68",
+        "TIME": "January"
+      },
+      {
+        "tmax": "4.3",
+        "temp": "0.2",
+        "tmin": "-4.0",
+        "accumulated_rain": "75.9",
+        "days_with_rain": "8",
+        "sun_hours": "11",
+        "rh": "65",
+        "TIME": "February"
+      },
+      {
+        "tmax": "8.5",
+        "temp": "4.2",
+        "tmin": "-0.1",
+        "accumulated_rain": "104.8",
+        "days_with_rain": "10",
+        "sun_hours": "12",
+        "rh": "64",
+        "TIME": "March"
+      },
+      {
+        "tmax": "14.8",
+        "temp": "10.3",
+        "tmin": "5.7",
+        "accumulated_rain": "92.0",
+        "days_with_rain": "10",
+        "sun_hours": "13",
+        "rh": "63",
+        "TIME": "April"
+      },
+      {
+        "tmax": "20.3",
+        "temp": "16.0",
+        "tmin": "11.6",
+        "accumulated_rain": "93.3",
+        "days_with_rain": "11",
+        "sun_hours": "14",
+        "rh": "68",
+        "TIME": "May"
+      },
+      {
+        "tmax": "25.3",
+        "temp": "21.3",
+        "tmin": "17.1",
+        "accumulated_rain": "101.3",
+        "days_with_rain": "11",
+        "sun_hours": "14",
+        "rh": "70",
+        "TIME": "June"
+      },
+      {
+        "tmax": "28.1",
+        "temp": "24.2",
+        "tmin": "20.2",
+        "accumulated_rain": "101.3",
+        "days_with_rain": "11",
+        "sun_hours": "14",
+        "rh": "69",
+        "TIME": "July"
+      },
+      {
+        "tmax": "27.0",
+        "temp": "23.2",
+        "tmin": "19.6",
+        "accumulated_rain": "107.3",
+        "days_with_rain": "11",
+        "sun_hours": "13",
+        "rh": "72",
+        "TIME": "August"
+      },
+      {
+        "tmax": "23.2",
+        "temp": "19.5",
+        "tmin": "16.2",
+        "accumulated_rain": "100.4",
+        "days_with_rain": "9",
+        "sun_hours": "13",
+        "rh": "74",
+        "TIME": "September"
+      },
+      {
+        "tmax": "16.9",
+        "temp": "13.3",
+        "tmin": "10.1",
+        "accumulated_rain": "100.0",
+        "days_with_rain": "9",
+        "sun_hours": "11",
+        "rh": "72",
+        "TIME": "October"
+      },
+      {
+        "tmax": "10.8",
+        "temp": "7.6",
+        "tmin": "4.4",
+        "accumulated_rain": "78.2",
+        "days_with_rain": "8",
+        "sun_hours": "10",
+        "rh": "69",
+        "TIME": "November"
+      },
+      {
+        "tmax": "5.4",
+        "temp": "2.4",
+        "tmin": "-0.7",
+        "accumulated_rain": "98.4",
+        "days_with_rain": "10",
+        "sun_hours": "9",
+        "rh": "69",
+        "TIME": "December"
+      }
+    ]
+  },
+  {
+    "name": "Sydney",
+    "country": "Australia",
+    "emoji": "🇦🇺",
+    "timezone": "GMT+11",
+    "climate": [
+      {
+        "tmax": "24.9",
+        "temp": "22.4",
+        "tmin": "19.8",
+        "accumulated_rain": "75.1",
+        "days_with_rain": "9",
+        "sun_hours": "14",
+        "rh": "73",
+        "TIME": "January"
+      },
+      {
+        "tmax": "24.6",
+        "temp": "22.3",
+        "tmin": "19.9",
+        "accumulated_rain": "93.6",
+        "days_with_rain": "10",
+        "sun_hours": "12",
+        "rh": "75",
+        "TIME": "February"
+      },
+      {
+        "tmax": "23.3",
+        "temp": "21.0",
+        "tmin": "18.5",
+        "accumulated_rain": "70.8",
+        "days_with_rain": "11",
+        "sun_hours": "12",
+        "rh": "74",
+        "TIME": "March"
+      },
+      {
+        "tmax": "21.2",
+        "temp": "18.5",
+        "tmin": "15.9",
+        "accumulated_rain": "81.2",
+        "days_with_rain": "10",
+        "sun_hours": "10",
+        "rh": "73",
+        "TIME": "April"
+      },
+      {
+        "tmax": "18.7",
+        "temp": "15.6",
+        "tmin": "13.0",
+        "accumulated_rain": "71.6",
+        "days_with_rain": "9",
+        "sun_hours": "10",
+        "rh": "73",
+        "TIME": "May"
+      },
+      {
+        "tmax": "16.4",
+        "temp": "13.4",
+        "tmin": "10.8",
+        "accumulated_rain": "88.0",
+        "days_with_rain": "9",
+        "sun_hours": "9",
+        "rh": "73",
+        "TIME": "June"
+      },
+      {
+        "tmax": "15.9",
+        "temp": "12.5",
+        "tmin": "9.5",
+        "accumulated_rain": "46.8",
+        "days_with_rain": "7",
+        "sun_hours": "10",
+        "rh": "69",
+        "TIME": "July"
+      },
+      {
+        "tmax": "16.9",
+        "temp": "13.4",
+        "tmin": "10.0",
+        "accumulated_rain": "48.9",
+        "days_with_rain": "6",
+        "sun_hours": "10",
+        "rh": "65",
+        "TIME": "August"
+      },
+      {
+        "tmax": "19.0",
+        "temp": "15.6",
+        "tmin": "12.2",
+        "accumulated_rain": "44.9",
+        "days_with_rain": "6",
+        "sun_hours": "11",
+        "rh": "66",
+        "TIME": "September"
+      },
+      {
+        "tmax": "20.9",
+        "temp": "17.6",
+        "tmin": "14.4",
+        "accumulated_rain": "50.8",
+        "days_with_rain": "8",
+        "sun_hours": "12",
+        "rh": "68",
+        "TIME": "October"
+      },
+      {
+        "tmax": "22.2",
+        "temp": "19.3",
+        "tmin": "16.4",
+        "accumulated_rain": "71.2",
+        "days_with_rain": "9",
+        "sun_hours": "13",
+        "rh": "71",
+        "TIME": "November"
+      },
+      {
+        "tmax": "23.9",
+        "temp": "21.1",
+        "tmin": "18.3",
+        "accumulated_rain": "55.4",
+        "days_with_rain": "8",
+        "sun_hours": "14",
+        "rh": "72",
+        "TIME": "December"
+      }
+    ]
+  },
+  {
+    "name": "Tokyo",
+    "country": "Japan",
+    "emoji": "🇯🇵",
+    "timezone": "GMT+9",
+    "climate": [
+      {
+        "tmax": "8.7",
+        "temp": "5.8",
+        "tmin": "2.0",
+        "accumulated_rain": "73.6",
+        "days_with_rain": "7",
+        "sun_hours": "9",
+        "rh": "64",
+        "TIME": "January"
+      },
+      {
+        "tmax": "9.3",
+        "temp": "6.4",
+        "tmin": "2.4",
+        "accumulated_rain": "76.1",
+        "days_with_rain": "8",
+        "sun_hours": "10",
+        "rh": "65",
+        "TIME": "February"
+      },
+      {
+        "tmax": "12.3",
+        "temp": "9.4",
+        "tmin": "5.4",
+        "accumulated_rain": "119.4",
+        "days_with_rain": "12",
+        "sun_hours": "11",
+        "rh": "66",
+        "TIME": "March"
+      },
+      {
+        "tmax": "16.9",
+        "temp": "14.3",
+        "tmin": "10.6",
+        "accumulated_rain": "115.2",
+        "days_with_rain": "11",
+        "sun_hours": "12",
+        "rh": "70",
+        "TIME": "April"
+      },
+      {
+        "tmax": "20.9",
+        "temp": "18.4",
+        "tmin": "15.3",
+        "accumulated_rain": "131.1",
+        "days_with_rain": "11",
+        "sun_hours": "13",
+        "rh": "75",
+        "TIME": "May"
+      },
+      {
+        "tmax": "23.8",
+        "temp": "21.6",
+        "tmin": "19.1",
+        "accumulated_rain": "160.3",
+        "days_with_rain": "14",
+        "sun_hours": "13",
+        "rh": "80",
+        "TIME": "June"
+      },
+      {
+        "tmax": "27.5",
+        "temp": "25.3",
+        "tmin": "22.8",
+        "accumulated_rain": "129.5",
+        "days_with_rain": "11",
+        "sun_hours": "13",
+        "rh": "81",
+        "TIME": "July"
+      },
+      {
+        "tmax": "28.9",
+        "temp": "26.6",
+        "tmin": "24.1",
+        "accumulated_rain": "111.1",
+        "days_with_rain": "11",
+        "sun_hours": "13",
+        "rh": "80",
+        "TIME": "August"
+      },
+      {
+        "tmax": "25.9",
+        "temp": "23.7",
+        "tmin": "21.1",
+        "accumulated_rain": "181.1",
+        "days_with_rain": "13",
+        "sun_hours": "11",
+        "rh": "78",
+        "TIME": "September"
+      },
+      {
+        "tmax": "20.8",
+        "temp": "18.5",
+        "tmin": "15.5",
+        "accumulated_rain": "198.6",
+        "days_with_rain": "12",
+        "sun_hours": "11",
+        "rh": "75",
+        "TIME": "October"
+      },
+      {
+        "tmax": "16.1",
+        "temp": "13.4",
+        "tmin": "10.0",
+        "accumulated_rain": "99.2",
+        "days_with_rain": "9",
+        "sun_hours": "9",
+        "rh": "72",
+        "TIME": "November"
+      },
+      {
+        "tmax": "11.3",
+        "temp": "8.5",
+        "tmin": "4.9",
+        "accumulated_rain": "60.2",
+        "days_with_rain": "7",
+        "sun_hours": "9",
+        "rh": "66",
+        "TIME": "December"
+      }
+    ]
+  },
+  {
+    "name": "Los Angeles",
+    "country": "United States of America",
+    "emoji": "🇺🇸",
+    "timezone": "GMT-8",
+    "climate": [
+      {
+        "tmax": "17.4",
+        "temp": "13.3",
+        "tmin": "9.6",
+        "accumulated_rain": "68.7",
+        "days_with_rain": "6",
+        "sun_hours": "10",
+        "rh": "68",
+        "TIME": "January"
+      },
+      {
+        "tmax": "17.3",
+        "temp": "13.7",
+        "tmin": "10.1",
+        "accumulated_rain": "74.0",
+        "days_with_rain": "5",
+        "sun_hours": "10",
+        "rh": "70",
+        "TIME": "February"
+      },
+      {
+        "tmax": "18.1",
+        "temp": "14.7",
+        "tmin": "11.1",
+        "accumulated_rain": "42.5",
+        "days_with_rain": "4",
+        "sun_hours": "11",
+        "rh": "71",
+        "TIME": "March"
+      },
+      {
+        "tmax": "19.4",
+        "temp": "15.8",
+        "tmin": "12.1",
+        "accumulated_rain": "14.1",
+        "days_with_rain": "2",
+        "sun_hours": "12",
+        "rh": "68",
+        "TIME": "April"
+      },
+      {
+        "tmax": "20.4",
+        "temp": "17.1",
+        "tmin": "13.7",
+        "accumulated_rain": "6.2",
+        "days_with_rain": "1",
+        "sun_hours": "13",
+        "rh": "71",
+        "TIME": "May"
+      },
+      {
+        "tmax": "22.1",
+        "temp": "18.7",
+        "tmin": "15.3",
+        "accumulated_rain": "0.9",
+        "days_with_rain": "0",
+        "sun_hours": "14",
+        "rh": "73",
+        "TIME": "June"
+      },
+      {
+        "tmax": "24.3",
+        "temp": "20.8",
+        "tmin": "17.4",
+        "accumulated_rain": "1.9",
+        "days_with_rain": "0",
+        "sun_hours": "14",
+        "rh": "72",
+        "TIME": "July"
+      },
+      {
+        "tmax": "25.2",
+        "temp": "21.3",
+        "tmin": "17.9",
+        "accumulated_rain": "0.2",
+        "days_with_rain": "0",
+        "sun_hours": "12",
+        "rh": "72",
+        "TIME": "August"
+      },
+      {
+        "tmax": "24.9",
+        "temp": "20.9",
+        "tmin": "17.6",
+        "accumulated_rain": "2.9",
+        "days_with_rain": "1",
+        "sun_hours": "12",
+        "rh": "72",
+        "TIME": "September"
+      },
+      {
+        "tmax": "22.9",
+        "temp": "19.0",
+        "tmin": "15.6",
+        "accumulated_rain": "12.2",
+        "days_with_rain": "2",
+        "sun_hours": "11",
+        "rh": "69",
+        "TIME": "October"
+      },
+      {
+        "tmax": "20.4",
+        "temp": "16.1",
+        "tmin": "12.5",
+        "accumulated_rain": "16.4",
+        "days_with_rain": "2",
+        "sun_hours": "9",
+        "rh": "64",
+        "TIME": "November"
+      },
+      {
+        "tmax": "17.5",
+        "temp": "13.3",
+        "tmin": "9.7",
+        "accumulated_rain": "43.1",
+        "days_with_rain": "4",
+        "sun_hours": "9",
+        "rh": "65",
+        "TIME": "December"
+      }
+    ]
+  }
+]

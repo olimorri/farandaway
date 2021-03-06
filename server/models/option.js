@@ -1,47 +1,47 @@
 module.exports = (sequelize, DataTypes) => {
   const Option = sequelize.define('option', {
-    title : {
+    title: {
       type: DataTypes.STRING,
-      allowNull: false
+      allowNull: false,
     },
-    destination : {
+    destination: {
       type: DataTypes.STRING,
-      allowNull: false
-    }, 
+      allowNull: false,
+    },
     budgetRangeMin: {
-      type : DataTypes.STRING,
-      allowNull: false
+      type: DataTypes.STRING,
+      allowNull: false,
     },
     budgetRangeMax: {
-      type : DataTypes.STRING,
-      allowNull: false
+      type: DataTypes.STRING,
+      allowNull: false,
     },
-    startDate : {
+    startDate: {
       type: DataTypes.DATE,
-      allowNull: false
+      allowNull: false,
     },
     nights: {
       type: DataTypes.INTEGER,
-      allowNull: false
+      allowNull: false,
     },
     votes: {
       type: DataTypes.INTEGER,
-      allowNull: true
+      allowNull: true,
     },
     isChosen: {
       type: DataTypes.BOOLEAN,
       allowNull: false,
-      default: false
-    }
-  })
+      default: false,
+    },
+  });
 
-  Option.associate = model => {
+  Option.associate = (model) => {
     Option.belongsTo(model.trip, {
       foreignKey: {
-        allowNull: false //this will be tripId
-      }
-    })
-  }
+        allowNull: false, //this will be tripId
+      },
+    });
+  };
 
   return Option;
-}
+};

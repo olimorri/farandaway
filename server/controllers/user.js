@@ -1,33 +1,37 @@
-'use-strict'
+'use-strict';
 
 const { user, trip, option } = require('../models');
-const { Op } = require('sequelize')
 
-exports.createUser = async (req,res) => {
+exports.createUser = async (req, res) => {
   const { emailAddress, firstName, lastName, password } = req.body;
   try {
-    const newUser = await user.create({ emailAddress, firstName, lastName, password });
+    const newUser = await user.create({
+      emailAddress,
+      firstName,
+      lastName,
+      password,
+    });
     res.send(newUser);
     res.status(200);
   } catch (err) {
-    console.log(err)
+    console.log(err);
     res.sendStatus(500);
   }
-}
+};
 
 exports.getUsers = async (req, res) => {
   try {
     const users = await user.findAll({
-      include: { model: trip, include: {model: option} }
+      include: { model: trip, include: { model: option } },
       // include: { model: trip, required: true, include: {model: option} } - this is the option for retrieving only users that include trips
     });
     res.status(200);
     res.send(users);
   } catch (err) {
-    console.log(err)
+    console.log(err);
     res.sendStatus(500);
   }
-}
+};
 //User.findAll({ include: { all: true, nested: true }});
 
 exports.getUser = async (req, res) => {
@@ -35,20 +39,20 @@ exports.getUser = async (req, res) => {
   try {
     const users = await user.findAll({
       where: {
-        id: userId
+        id: userId,
       },
-      include: { 
-        model: trip, 
-        include: {model: option}
-      }
+      include: {
+        model: trip,
+        include: { model: option },
+      },
     });
     res.status(200);
     res.send(users);
   } catch (err) {
-    console.log(err)
+    console.log(err);
     res.sendStatus(500);
   }
-}
+};
 
 exports.userLogin = async (req, res) => {
   const { password } = req.headers;
@@ -56,16 +60,16 @@ exports.userLogin = async (req, res) => {
   try {
     const users = await user.findAll({
       where: {
-        emailAddress: emailAddress
-      }
+        emailAddress: emailAddress,
+      },
     });
     res.status(200);
     res.send(users);
   } catch (err) {
-    console.log(err)
+    console.log(err);
     res.sendStatus(500);
   }
-}
+};
 
 exports.createTrip = async (req, res) => {
   const { title, options } = req.body;
@@ -73,10 +77,19 @@ exports.createTrip = async (req, res) => {
   try {
     const newTrip = await trip.create({
       title,
-      userId
-    })
-    options.map(newOption => {
-      const { title , destination, budgetRangeMin, budgetRangeMax, startDate, nights, isChosen, votes } = newOption
+      userId,
+    });
+    options.map((newOption) => {
+      const {
+        title,
+        destination,
+        budgetRangeMin,
+        budgetRangeMax,
+        startDate,
+        nights,
+        isChosen,
+        votes,
+      } = newOption;
       const tripId = newTrip.id;
       const addOption = option.create({
         title,
@@ -87,49 +100,58 @@ exports.createTrip = async (req, res) => {
         nights,
         votes,
         isChosen,
-        tripId
-      })
-    })
+        tripId,
+      });
+    });
     res.send(newTrip);
     res.status(200);
   } catch (err) {
     console.log(err);
     res.sendStatus(500);
   }
-}
+};
 
 exports.getTrips = async (req, res) => {
   try {
     const trips = await trip.findAll({
-      include: [option]
+      include: [option],
     });
     res.status(200);
     res.send(trips);
   } catch (err) {
-    console.log(err)
+    console.log(err);
     res.sendStatus(500);
   }
-}
+};
 
 exports.getTrip = async (req, res) => {
   const tripId = req.params.tripId;
   try {
     const trips = await trip.findAll({
       where: {
-        id: tripId
+        id: tripId,
       },
-      include: [option]
+      include: [option],
     });
     res.status(200);
     res.send(trips);
   } catch (err) {
-    console.log(err)
+    console.log(err);
     res.sendStatus(500);
   }
-}
+};
 
 exports.createOption = async (req, res) => {
-  const { title , destination, budgetRangeMin, budgetRangeMax, startDate, nights, isChosen , tripId } = req.body;
+  const {
+    title,
+    destination,
+    budgetRangeMin,
+    budgetRangeMax,
+    startDate,
+    nights,
+    isChosen,
+    tripId,
+  } = req.body;
   try {
     const newOption = await option.create({
       title,
@@ -139,29 +161,28 @@ exports.createOption = async (req, res) => {
       startDate,
       nights,
       isChosen,
-      tripId
-    })
+      tripId,
+    });
     res.send(newOption);
     res.status(200);
   } catch (err) {
     console.log(err);
     res.sendStatus(500);
   }
-}
+};
 
 exports.addVote = async (req, res) => {
   const optionId = req.params.optionId;
   try {
-    const chosenOption = await option.increment('votes',{
+    const chosenOption = await option.increment('votes', {
       where: {
-        id: optionId
-      }
+        id: optionId,
+      },
     });
     res.status(200);
     res.send(chosenOption);
-
   } catch (err) {
     console.log(err);
     res.sendStatus(500);
   }
-}
+};
