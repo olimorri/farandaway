@@ -12,18 +12,36 @@ export class TripPollVotingComponent implements OnInit {
 
   @Input() tripId: number = 0;
 
-  constructor(private apiClientService: ApiClientService) { }
+  averageTemp: number = 0;
+  hoursOfSun: number = 0;
+  flightPrice: number = 0;
+
+  constructor(private apiClientService: ApiClientService) {}
 
   ngOnInit(): void {
     if (this.option && this.option.votes === null) this.option.votes = 0;
+    this.getInfo();
   }
 
   handleVote() {
     if (this.option) {
-      this.apiClientService.vote(this.option.id)
-        .subscribe(
-          () => { if (this.option) this.option.votes++; },
-        );
+      this.apiClientService.vote(this.option.id).subscribe(() => {
+        if (this.option) this.option.votes++;
+      });
+    }
+  }
+
+  getInfo() {
+    if (this.option) {
+      const startDate = this.option.startDate;
+      const destination = this.option.destination;
+      this.apiClientService
+        .getAdditionalInfo(startDate, destination)
+        .subscribe((info) => {
+          this.averageTemp = info[0];
+          this.hoursOfSun = info[1];
+          this.flightPrice = info[2];
+        });
     }
   }
 }

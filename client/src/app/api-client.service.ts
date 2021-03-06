@@ -44,4 +44,12 @@ export class ApiClientService {
     const url = `${this.baseUrl}/options/${optionId}`;
     return this.http.put(url, null);
   }
+
+  getAdditionalInfo(
+    startDate: string,
+    destination: string,
+  ): Observable<number[]> {
+    const url = `${this.baseUrl}/additionalInfo/${destination}/${startDate}`;
+    return this.http.get<number[]>(url);
+  }
 }
