@@ -4,6 +4,7 @@
     "country": "Spain",
     "emoji": "🇪🇸",
     "timezone": "GMT+1",
+    "img": "https://www.telegraph.co.uk/content/dam/Travel/Destinations/Europe/Spain/Barcelona/barcelona-parc-guell-cityscape-xlarge.jpg",
     "climate": [
       {
         "tmax": "12.2",
@@ -132,6 +133,7 @@
     "country": "Germany",
     "emoji": "🇩🇪",
     "timezone": "GMT+1",
+    "img": "https://strongcitiesnetwork.org/en/wp-content/uploads/sites/5/2017/11/Berlin-Nikolaiviertel-scaled.jpg",
     "climate": [
       {
         "tmax": "3.2",
@@ -260,6 +262,7 @@
     "country": "United States of America",
     "emoji": "🇺🇸",
     "timezone": "GMT-5",
+    "img": "https://media.timeout.com/images/105730440/image.jpg",
     "climate": [
       {
         "tmax": "3.0",
@@ -388,6 +391,7 @@
     "country": "Australia",
     "emoji": "🇦🇺",
     "timezone": "GMT+11",
+    "img": "https://connect-assets.prosple.com/cdn/ff/PPHtx8TI85Ee93z9_aU5182dhjVZsHC8QxVV10gx4xY/1564392911/public/styles/scale_890_no_upsize/public/2019-07/Article_CareerPlanning_movetosydney_838x484_2018.jpg?itok=Hg2WDrSR",
     "climate": [
       {
         "tmax": "24.9",
@@ -516,6 +520,7 @@
     "country": "Japan",
     "emoji": "🇯🇵",
     "timezone": "GMT+9",
+    "img": "https://www.trafalgar.com/real-word/wp-content/uploads/sites/3/2019/11/First-time-in-Tokyo.jpg",
     "climate": [
       {
         "tmax": "8.7",
@@ -644,6 +649,7 @@
     "country": "United States of America",
     "emoji": "🇺🇸",
     "timezone": "GMT-8",
+    "img": "https://d3500i1ecak5li.cloudfront.net/s3fs-public/styles/banner/public/images/chapters/Los-Angeles-Travel-Massive.jpg",
     "climate": [
       {
         "tmax": "17.4",

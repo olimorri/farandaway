@@ -31,6 +31,8 @@ exports.getDestination = async (req, res) => {
       if (destination.name === destinationName) {
         requestedInfo.push(+destination.climate[month - 1].tmax);
         requestedInfo.push(+destination.climate[month - 1].days_with_rain);
+        requestedInfo.push(destination.img);
+        //requestedInfo.push(+destination.climate[month - 1].days_with_rain);
       }
     });
     const flightInfo = await flight.findAll({
