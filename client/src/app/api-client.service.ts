@@ -2,45 +2,46 @@ import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
 
-import {Trip} from './interfaces/trip';
+import { Trip } from './interfaces/trip';
 import { CreateTripResponse } from './interfaces/create-trip-response';
 import { User } from './interfaces/user';
-import { UserLogin } from './interfaces/user-login';
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root',
 })
 export class ApiClientService {
+  private baseUrl = 'http://localhost:3000';
 
-  private baseUrl = "http://localhost:3000";
+  constructor(private http: HttpClient) {}
 
-  constructor(private http: HttpClient) { }
-
-  postTrip(trip: Trip) : Observable<CreateTripResponse> {
+  postTrip(trip: Trip): Observable<CreateTripResponse> {
     const url = `${this.baseUrl}/trips/1`;
     const body = JSON.parse(JSON.stringify(trip));
-    const headers = { 'Content-Type': 'application/json'}
-    return this.http.post<CreateTripResponse>(url, body, {headers, "observe": "body"})
+    const headers = { 'Content-Type': 'application/json' };
+    return this.http.post<CreateTripResponse>(url, body, {
+      headers,
+      observe: 'body',
+    });
   }
 
-  getUser(id: number) : Observable<User[]> {
-    const url = `${this.baseUrl}/users/${id}`
+  getUser(id: number): Observable<User[]> {
+    const url = `${this.baseUrl}/users/${id}`;
     return this.http.get<User[]>(url);
   }
 
   userLogin(email: string, password: string): Observable<User[]> {
-    const url = `${this.baseUrl}/login/${email}`
-    const headers = {password: password}
-    return this.http.get<User[]>(url, {headers});
+    const url = `${this.baseUrl}/login/${email}`;
+    const headers = { password };
+    return this.http.get<User[]>(url, { headers });
   }
 
-  getTrip(id: number) : Observable<Trip[]> {
-    const url = `${this.baseUrl}/trips/${id}`
-    return this.http.get<Trip[]>(url)
+  getTrip(id: number): Observable<Trip[]> {
+    const url = `${this.baseUrl}/trips/${id}`;
+    return this.http.get<Trip[]>(url);
   }
 
   vote(optionId: number | undefined) {
-    const url = `${this.baseUrl}/options/${optionId}`
+    const url = `${this.baseUrl}/options/${optionId}`;
     return this.http.put(url, null);
   }
 }

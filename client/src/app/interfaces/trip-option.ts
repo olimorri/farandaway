@@ -1,11 +1,11 @@
 export interface TripOption {
   title: string;
   id?: number;
-  destination : string;
+  destination: string;
   startDate: string;
   nights: number;
   budgetRangeMin: number;
   budgetRangeMax: number;
-  votes: number,
+  votes: number;
   isChosen: boolean;
 }

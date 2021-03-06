@@ -1,7 +1,7 @@
-import { TripOption } from "./trip-option";
+import { TripOption } from './trip-option';
 
 export interface Trip {
-  title: string,
-  id ?: number,
-  options: TripOption[]
+  title: string;
+  id?: number;
+  options: TripOption[];
 }

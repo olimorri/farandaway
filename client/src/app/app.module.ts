@@ -1,11 +1,11 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import {FormsModule, ReactiveFormsModule} from '@angular/forms';
-import { HttpClientModule } from '@angular/common/http'
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
 
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MaterialModule } from './material/material.module';
 import { HeaderComponent } from './header/header.component';
 import { CreateTripComponent } from './create-trip/create-trip.component';
@@ -30,7 +30,7 @@ import { UserLoginComponent } from './user-login/user-login.component';
     TripPollComponent,
     TripPollVotingComponent,
     UserDashboardComponent,
-    UserLoginComponent
+    UserLoginComponent,
   ],
   imports: [
     BrowserModule,
@@ -39,10 +39,10 @@ import { UserLoginComponent } from './user-login/user-login.component';
     FormsModule,
     HttpClientModule,
     MaterialModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
 
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
 export class AppModule { }
