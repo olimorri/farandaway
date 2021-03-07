@@ -16,12 +16,21 @@ body {
 
 .btn_header {
   margin-right: 40px;
+  background-color: #117987;
+  outline: none;
+  border-radius: 15px;
+  border: none;
+  padding: 10px 10px;
+  font-weight: 700;
+  letter-spacing: 0.2px;
+  font-size: 14px;
+  color: white;
 }
 
 .btn_medium {
   background-color: #ff6a56;
   outline: none;
-  border-radius: 50px;
+  border-radius: 15px;
   border: none;
   padding: 15px 15px;
   margin-top: 20px;
@@ -59,19 +68,6 @@ body {
   padding: 5px 5px;
   height: 54px;
   width: 100%;
-  font-weight: 700;
-  letter-spacing: 0.2px;
-  font-size: 18px;
-  color: white;
-}
-
-.btn_vote:active {
-  background-color: #963e34;
-  outline: none;
-  border-radius: 0px 0px 24px 24px;
-  border: none;
-  padding: 15px 15px;
-  height: 60px;
   font-weight: 700;
   letter-spacing: 0.2px;
   font-size: 18px;
@@ -145,10 +141,12 @@ body {
 .header_nav {
   justify-content: space-between;
   align-items: center;
+  padding: 10px 0px;
 }
 
 .header_title {
   margin-left: 40px;
+  outline: none;
 }
 
 .height_three_four {
@@ -205,15 +203,14 @@ p {
   width: 66%;
   min-width: 275px;
   padding: 15px 15px;
-  border-radius: 50px;
+  border-radius: 15px;
   border: 1px solid black;
   margin: 10px 0px;
   outline: none;
 }
 
 .title_shadow {
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-  margin-bottom: 0px;
+  margin: -12px 0px;
   text-align: center;
 }
 
@@ -233,11 +230,11 @@ p {
   border-radius: 25px;
   background: #ffffff;
   box-sizing: border-box;
-  width: 80%;
+  min-width: 270px;
   height: 90%;
   max-height: 600px;
-  max-width: 500px;
-  margin: 10px auto;
+  max-width: 300px;
+  margin: 10px 5px;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
 
@@ -268,7 +265,6 @@ p {
   size: 18px;
   padding: 5px 0px;
   color: #ffffff;
-
   margin-top: 0px;
   border-radius: 24px 24px 0px 0px;
   height: 25px;
@@ -303,6 +299,11 @@ p {
 }
 
 .voting_container {
-  height: 100vh;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
   overflow: auto;
+  width: 242vw;
+  padding: 10px 20px;
 }

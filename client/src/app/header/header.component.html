@@ -1,7 +1,11 @@
 <div class="flex_row header_nav">
-  <h1 class="header_title">far&away</h1>
+  <h1 class="header_title" routerLink="/" routerLinkActive="active">
+    far&away
+  </h1>
   <div *ngIf="!loggedIn; else signedInBlock">
-    <button class="btn_header" routerLink="/login" routerLinkActive="active" >Sign in</button>
+    <button class="btn_header" routerLink="/login" routerLinkActive="active">
+      Sign in
+    </button>
   </div>
   <ng-template #signedInBlock>
     <button class="btn_header">Account</button>

@@ -1,8 +1,17 @@
-<div *ngIf="trip" class="flex-col margin_none">
-  <h1 class="title_shadow">{{trip.title}}</h1>
-  <div class="voting_container">
-    <div class="flex_col trip_option_container_large" *ngFor="let option of trip.options">
-      <app-trip-poll-voting [option]="option" [tripId]="tripId"></app-trip-poll-voting>
+<div *ngIf="trip">
+  <h1 class="title_shadow">{{ trip.title }}</h1>
+  <p class="text_center">Swipe to view and tap 👍 to vote!</p>
+  <div class="flex-col margin_none" style="overflow: auto">
+    <div class="voting_container">
+      <div
+        class="flex_col trip_option_container_large"
+        *ngFor="let option of trip.options"
+      >
+        <app-trip-poll-voting
+          [option]="option"
+          [tripId]="tripId"
+        ></app-trip-poll-voting>
+      </div>
     </div>
   </div>
 </div>

@@ -4,19 +4,20 @@
       {{ option.title }} Votes: {{ option.votes }}
     </p>
   </div>
-
   <img src="{{ heroImg }}" class="img_vote" />
   <div class="option_info">
     <div class="padding_left_small">
       <p class="trip_option_destination">{{ option.destination }}</p>
-      <p>{{ option.startDate | date }}</p>
-      <p>£{{ option.budgetRangeMin }} - {{ option.budgetRangeMax }}</p>
+      <p>{{ option.startDate | date }} - {{ option.nights }} {{ time }}</p>
+      <p>
+        £{{ option.budgetRangeMin }} - {{ option.budgetRangeMax }} per person
+      </p>
     </div>
   </div>
   <div class="option_info">
     <div class="padding_left_small">
       <p class="trip_option_subtitle">Cheapest return flight:</p>
-      <p>£{{ flightPrice }}</p>
+      <p>£{{ flightPrice }} per person</p>
     </div>
   </div>
   <div class="option_info_small flex_row">
@@ -29,7 +30,7 @@
       <p>{{ hoursOfSun }}</p>
     </div>
   </div>
-  <button class="btn_vote" (click)="handleVote()">
+  <button class="btn_vote" matRipple (click)="handleVote()">
     <svg
       height="40px"
       width="40px"

@@ -16,6 +16,7 @@ export class TripPollVotingComponent implements OnInit {
   hoursOfSun: number = 0;
   heroImg: string = '';
   flightPrice: number = 0;
+  time: string = 'night';
 
   constructor(private apiClientService: ApiClientService) {}
 
@@ -36,6 +37,7 @@ export class TripPollVotingComponent implements OnInit {
     if (this.option) {
       const startDate = this.option.startDate;
       const destination = this.option.destination;
+      if (this.option.nights > 1) this.time = 'nights';
       this.apiClientService
         .getAdditionalInfo(startDate, destination)
         .subscribe((info) => {

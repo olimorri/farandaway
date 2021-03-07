@@ -1,8 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { ApiClientService } from '../api-client.service';
-import { UserLogin } from '../interfaces/user-login';
-import { User } from '../interfaces/user';
+import { UserInfoService } from '../user-info.service';
 
 @Component({
   selector: 'app-user-login',
@@ -10,19 +9,26 @@ import { User } from '../interfaces/user';
   styleUrls: ['./user-login.component.css'],
 })
 export class UserLoginComponent implements OnInit {
-  constructor(private apiClientService: ApiClientService, private router: Router) { }
+  constructor(
+    private apiClientService: ApiClientService,
+    private router: Router,
+    private userInfo: UserInfoService,
+  ) {}
 
   emailAddress: string = '';
 
   password: string = '';
 
-  ngOnInit(): void {
-  }
+  ngOnInit(): void {}
 
   userLogin() {
-    this.apiClientService.userLogin(this.emailAddress, this.password)
+    this.apiClientService
+      .userLogin(this.emailAddress, this.password)
       .subscribe((user) => {
-        if (user) this.router.navigate([`/users/${user[0].id}`]);
+        if (user) {
+          this.userInfo.setUserId(user[0].id);
+          this.router.navigate([`/users/${user[0].id}`]);
+        }
       });
   }
 }
