@@ -3,11 +3,16 @@
     far&away
   </h1>
   <div *ngIf="!loggedIn; else signedInBlock">
-    <button class="btn_header" routerLink="/login" routerLinkActive="active">
+    <button
+      matRipple
+      class="btn_header"
+      routerLink="/login"
+      routerLinkActive="active"
+    >
       Sign in
     </button>
   </div>
   <ng-template #signedInBlock>
-    <button class="btn_header">Account</button>
+    <button matRipple class="btn_header">Account</button>
   </ng-template>
 </div>
