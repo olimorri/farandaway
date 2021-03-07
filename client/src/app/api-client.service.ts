@@ -15,14 +15,11 @@ export class ApiClientService {
 
   constructor(private http: HttpClient) {}
 
-  postTrip(trip: Trip): Observable<CreateTripResponse> {
-    const url = `${this.baseUrl}/trips/1`;
-    const body = JSON.parse(JSON.stringify(trip));
+  userSignUp(newUser: User): Observable<User> {
+    const url = `${this.baseUrl}/users`;
+    const body = JSON.parse(JSON.stringify(newUser));
     const headers = { 'Content-Type': 'application/json' };
-    return this.http.post<CreateTripResponse>(url, body, {
-      headers,
-      observe: 'body',
-    });
+    return this.http.post<User>(url, body, { headers, observe: 'body' });
   }
 
   getUser(id: number): Observable<User[]> {
@@ -34,6 +31,16 @@ export class ApiClientService {
     const url = `${this.baseUrl}/login/${email}`;
     const headers = { password };
     return this.http.get<User[]>(url, { headers });
+  }
+
+  postTrip(trip: Trip): Observable<CreateTripResponse> {
+    const url = `${this.baseUrl}/trips/1`;
+    const body = JSON.parse(JSON.stringify(trip));
+    const headers = { 'Content-Type': 'application/json' };
+    return this.http.post<CreateTripResponse>(url, body, {
+      headers,
+      observe: 'body',
+    });
   }
 
   getTrip(id: number): Observable<Trip[]> {

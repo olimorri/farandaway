@@ -4,6 +4,17 @@ html,
 body {
   height: 100%;
 }
+
+a {
+  color: black;
+  font-weight: 400;
+  line-height: 1.25em;
+}
+
+a:hover {
+  color: #ff6a56;
+}
+
 body {
   margin: 0px;
   font-family: 'Rubik', sans-serif;
@@ -215,8 +226,7 @@ p {
 }
 
 .trip_option_container_small {
-  border: 1px solid black;
-  border-radius: 25px;
+  border-radius: 15px;
   background: #ffffff;
   box-sizing: border-box;
   width: 80%;
@@ -301,7 +311,6 @@ p {
 .voting_container {
   display: flex;
   flex-direction: row;
-  justify-content: center;
   align-items: center;
   overflow: auto;
   width: 242vw;

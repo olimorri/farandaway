@@ -17,6 +17,7 @@ import { TripPollComponent } from './trip-poll/trip-poll.component';
 import { TripPollVotingComponent } from './trip-poll/trip-poll-voting/trip-poll-voting.component';
 import { UserDashboardComponent } from './user-dashboard/user-dashboard.component';
 import { UserLoginComponent } from './user-login/user-login.component';
+import { UserSignupComponent } from './user-signup/user-signup.component';
 
 @NgModule({
   declarations: [
@@ -31,6 +32,7 @@ import { UserLoginComponent } from './user-login/user-login.component';
     TripPollVotingComponent,
     UserDashboardComponent,
     UserLoginComponent,
+    UserSignupComponent,
   ],
   imports: [
     BrowserModule,

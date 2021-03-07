@@ -26,7 +26,7 @@ export class UserLoginComponent implements OnInit {
       .userLogin(this.emailAddress, this.password)
       .subscribe((user) => {
         if (user) {
-          this.userInfo.setUserId(user[0].id);
+          this.userInfo.setUser(user[0]);
           this.router.navigate([`/users/${user[0].id}`]);
         }
       });

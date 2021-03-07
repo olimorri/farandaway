@@ -1,12 +1,29 @@
 <div class="flex_col col_hor_center col_vert_center text_center">
-  <h1>Cocktails by the<br />pool...🍹</h1>
-  <form class="flex_col col_hor_center login_form" (submit)="userLogin()">
+  <h1>
+    Fasten your<br />
+    seatbelts 🛫
+  </h1>
+  <form class="flex_col col_hor_center login_form" (submit)="userSignUp()">
     <input
       type="text"
       class="text_input_large"
       name="emailAddress"
       placeholder="Email"
       [(ngModel)]="emailAddress"
+    />
+    <input
+      type="text"
+      class="text_input_large"
+      name="firstName"
+      placeholder="First name"
+      [(ngModel)]="firstName"
+    />
+    <input
+      type="text"
+      class="text_input_large"
+      name="lastName"
+      placeholder="Last name"
+      [(ngModel)]="lastName"
     />
     <input
       type="password"
@@ -16,11 +33,8 @@
       [(ngModel)]="password"
     />
     <button matRipple type="submit" class="btn_medium full_width">
-      Log in
+      Sign up
     </button>
     <br />
   </form>
-  <a routerLink="/signup" routerLinkActive="active"
-    >Don't have an account?<br />Sign up!</a
-  >
 </div>

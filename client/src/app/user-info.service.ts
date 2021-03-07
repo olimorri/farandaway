@@ -1,4 +1,5 @@
 import { Injectable } from '@angular/core';
+import { User } from './interfaces/user';
 
 @Injectable({
   providedIn: 'root',
@@ -6,14 +7,13 @@ import { Injectable } from '@angular/core';
 export class UserInfoService {
   constructor() {}
 
-  userId: number | undefined = 0;
+  user: User | undefined;
 
   getUserId() {
-    return this.userId;
+    return this.user?.id;
   }
 
-  setUserId(id: number | undefined) {
-    console.log(id);
-    return (this.userId = id);
+  setUser(user: User) {
+    return (this.user = user);
   }
 }
