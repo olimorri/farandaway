@@ -2,7 +2,7 @@
   <h1 class="header_title" routerLink="/" routerLinkActive="active">
     far&away
   </h1>
-  <div *ngIf="!loggedIn; else signedInBlock">
+  <div *ngIf="!userId; else signedInBlock">
     <button
       matRipple
       class="btn_header"
@@ -13,6 +13,13 @@
     </button>
   </div>
   <ng-template #signedInBlock>
-    <button matRipple class="btn_header">Account</button>
+    <button
+      matRipple
+      class="btn_header"
+      routerLink="/users/{{ userId }}"
+      routerLinkActive="active"
+    >
+      Account
+    </button>
   </ng-template>
 </div>

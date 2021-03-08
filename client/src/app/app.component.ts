@@ -7,6 +7,5 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'client';
-  loggedIn = false;
   userId: number | undefined;
 }

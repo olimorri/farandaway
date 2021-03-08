@@ -13,8 +13,7 @@ const routes: Routes = [
   { path: 'signup', component: UserSignupComponent },
   { path: 'login', component: UserLoginComponent },
   { path: 'trips', component: CreateTripComponent },
-  { path: '', component: TripPollResultsComponent },
-  //{ path: '', component: CreateTripComponent },
+  { path: '', component: CreateTripComponent },
 ];
 
 @NgModule({
