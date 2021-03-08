@@ -7,13 +7,13 @@ import { Trip } from './interfaces/trip';
 export class TripInfoService {
   constructor() {}
 
-  trip: Trip | undefined;
+  trips: Trip[] | undefined;
 
   getTrip() {
-    return this.trip;
+    //return this.trip;
   }
 
-  setTrip(trip: Trip) {
-    return (this.trip = trip);
+  setTrip(trips: Trip[]) {
+    return (this.trips = trips);
   }
 }

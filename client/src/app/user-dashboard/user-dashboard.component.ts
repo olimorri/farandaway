@@ -4,6 +4,7 @@ import { ApiClientService } from '../api-client.service';
 
 import { Trip } from '../interfaces/trip';
 import { User } from '../interfaces/user';
+import { TripInfoService } from '../trip-info.service';
 
 @Component({
   selector: 'app-user-dashboard',
@@ -14,6 +15,7 @@ export class UserDashboardComponent implements OnInit {
   constructor(
     private route: ActivatedRoute,
     private apiClientService: ApiClientService,
+    private tripInfoService: TripInfoService,
   ) {}
 
   user: User | undefined;
@@ -30,6 +32,7 @@ export class UserDashboardComponent implements OnInit {
     this.apiClientService.getUser(id).subscribe((user) => {
       this.user = user[0];
       if (this.user) this.trips = this.user.trips;
+      //this.tripInfoService.setTrip(this.trips);
       //this.haveTrips = true;
       if (!this.user) alert('User not found, please try again');
     });

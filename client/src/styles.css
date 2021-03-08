@@ -1,4 +1,5 @@
 /* You can add global styles to this file, and also import other style files */
+@import '~animate.css/animate.min';
 
 html,
 body {
@@ -222,6 +223,56 @@ p {
 
 .padding_left_small {
   padding-left: 10px;
+}
+
+.results_container {
+  height: 100%;
+}
+
+.results_bar_container {
+  width: 100%;
+  height: 100%;
+  margin-top: 10px;
+  justify-content: space-evenly;
+  align-content: stretch;
+}
+
+.result_bar {
+  color: white;
+  width: 125px;
+  align-self: flex-end;
+  border-radius: 15px 15px 0px 0px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  animation: slideInUp; /* referring directly to the animation's @keyframe declaration */
+  animation-duration: 2s;
+}
+
+.result_bar_first {
+  height: 90%;
+  background-color: #ff6a56;
+  transition: 0.25s ease-in;
+}
+.result_bar_second {
+  height: 75%;
+  background: rgba(17, 121, 135, 1);
+}
+.result_bar_third {
+  height: 65%;
+  background: rgba(17, 121, 135, 0.35);
+}
+
+.results_thumb {
+  margin-top: 40px;
+}
+
+.results_bar_info {
+  width: 80%;
+}
+
+.results_bar_info p {
+  font-weight: 500;
 }
 
 .row_vert_center {

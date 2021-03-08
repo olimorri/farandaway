@@ -1,1 +1,17 @@
-<p>trip-poll-results works!</p>
+<div *ngIf="trip" class="flex_col col_hor_center results_container">
+  <h1 class="title_shadow">{{ trip.title }}</h1>
+  <div class="flex_row results_bar_container">
+    <app-trip-poll-bars
+      [option]="secondOption"
+      class="result_bar result_bar_second"
+    ></app-trip-poll-bars>
+    <app-trip-poll-bars
+      [option]="firstOption"
+      class="result_bar result_bar_first"
+    ></app-trip-poll-bars>
+    <app-trip-poll-bars
+      [option]="thirdOption"
+      class="result_bar result_bar_third"
+    ></app-trip-poll-bars>
+  </div>
+</div>

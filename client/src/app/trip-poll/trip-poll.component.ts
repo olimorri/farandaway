@@ -9,9 +9,12 @@ import { Trip } from '../interfaces/trip';
   styleUrls: ['./trip-poll.component.css'],
 })
 export class TripPollComponent implements OnInit {
-  constructor(private route: ActivatedRoute, private apiClientService: ApiClientService) { }
+  constructor(
+    private route: ActivatedRoute,
+    private apiClientService: ApiClientService,
+  ) {}
 
-  tripId : any = '';
+  tripId: any = '';
 
   trip: Trip | undefined;
 
@@ -24,13 +27,12 @@ export class TripPollComponent implements OnInit {
   }
 
   getTrip(id: number) {
-    this.apiClientService.getTrip(id)
-      .subscribe((trip) => {
-        this.trip = trip[0];
-        if (this.trip.options) {
+    this.apiClientService.getTrip(id).subscribe((trip) => {
+      this.trip = trip[0];
+      if (this.trip.options) {
         // sort options when they come through from db
-          this.trip.options.sort((a, b) => (a.title >= b.title ? 1 : -1));
-        }
-      });
+        this.trip.options.sort((a, b) => (a.title >= b.title ? 1 : -1));
+      }
+    });
   }
 }

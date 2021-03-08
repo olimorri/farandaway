@@ -20,6 +20,7 @@ import { UserLoginComponent } from './user-login/user-login.component';
 import { UserSignupComponent } from './user-signup/user-signup.component';
 import { TripPollResultsComponent } from './trip-poll/trip-poll-results/trip-poll-results.component';
 import { UserDashboardTripComponent } from './user-dashboard/user-dashboard-trip/user-dashboard-trip.component';
+import { TripPollBarsComponent } from './trip-poll/trip-poll-bars/trip-poll-bars.component';
 
 @NgModule({
   declarations: [
@@ -37,6 +38,7 @@ import { UserDashboardTripComponent } from './user-dashboard/user-dashboard-trip
     UserSignupComponent,
     TripPollResultsComponent,
     UserDashboardTripComponent,
+    TripPollBarsComponent,
   ],
   imports: [
     BrowserModule,
