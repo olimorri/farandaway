@@ -16,17 +16,18 @@
   <div class="flex_col col_hor_center dashboard_trip_container">
     <div
       *ngFor="let trip of trips"
-      class="flex_row row_vert_center dashboard_trip"
+      class="flex_col col_vert_center col_hor_center dashboard_trip"
     >
-      <h4>{{ trip.title }}</h4>
+      <div class="dashboard_trip_title">
+        <h4>{{ trip.title }}</h4>
+      </div>
       <div class="flex_row dashboard_trip_info_buttons">
         <button
           class="btn_trip_add full_width dashboard_trip_btn dashboard_more_info"
           matRipple
           routerLink="/trips/{{ trip.id }}"
         >
-          More <br />
-          info
+          More info
         </button>
         <button
           class="btn_trip_add full_width dashboard_trip_btn dashboard_results"

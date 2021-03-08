@@ -1,4 +1,6 @@
 import { Component, Input, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
+
 import { TripOption } from 'src/app/interfaces/trip-option';
 import { ApiClientService } from '../../api-client.service';
 
@@ -18,7 +20,10 @@ export class TripPollVotingComponent implements OnInit {
   flightPrice: number = 0;
   time: string = 'night';
 
-  constructor(private apiClientService: ApiClientService) {}
+  constructor(
+    private apiClientService: ApiClientService,
+    private router: Router,
+  ) {}
 
   ngOnInit(): void {
     if (this.option && this.option.votes === null) this.option.votes = 0;
@@ -29,6 +34,7 @@ export class TripPollVotingComponent implements OnInit {
     if (this.option) {
       this.apiClientService.vote(this.option.id).subscribe(() => {
         if (this.option) this.option.votes++;
+        this.router.navigate([`/trips/results/${this.tripId}`]);
       });
     }
   }

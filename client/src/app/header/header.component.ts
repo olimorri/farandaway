@@ -18,6 +18,5 @@ export class HeaderComponent implements OnInit {
 
   ngOnInit(): void {
     this.userInfo.currentUserId.subscribe((userId) => (this.userId = userId));
-    console.log(this.userId);
   }
 }

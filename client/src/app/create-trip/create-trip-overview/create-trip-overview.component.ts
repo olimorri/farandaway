@@ -1,6 +1,4 @@
-import {
-  Component, EventEmitter, Input, OnInit, Output,
-} from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { Router } from '@angular/router';
 import { ApiClientService } from '../../api-client.service';
 import { TripOption } from '../../interfaces/trip-option';
@@ -18,20 +16,21 @@ export class CreateTripOverviewComponent implements OnInit {
 
   tripOptions: TripOption[] = [];
 
-  tripOptionTitles: string[] = ['Option 1', 'Option 2', 'Option 3']
+  tripOptionTitles: string[] = ['Option 1', 'Option 2', 'Option 3'];
 
-  constructor(private apiClientService: ApiClientService, private router: Router) { }
+  constructor(
+    private apiClientService: ApiClientService,
+    private router: Router,
+  ) {}
 
-  ngOnInit(): void {
-  }
+  ngOnInit(): void {}
 
   postTrip() {
     const trip = { title: this.tripTitle, options: this.tripOptions };
-    this.apiClientService.postTrip(trip)
-      .subscribe((created) => {
-        const tripId = created.id;
-        this.router.navigate([`/trips/${tripId}`]);
-      });
+    this.apiClientService.postTrip(trip).subscribe((created) => {
+      const tripId = created.id;
+      this.router.navigate([`/trips/${tripId}`]);
+    });
   }
 
   addTripOption(newTripOption: TripOption) {
