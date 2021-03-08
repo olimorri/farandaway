@@ -7,7 +7,7 @@ module.exports = (sequelize, DataTypes) => {
   });
 
   Trip.associate = (model) => {
-    Trip.hasMany(model.option);
+    Trip.hasMany(model.option, { onDelete: 'cascade', hooks: true });
     Trip.belongsTo(model.user, {
       foreignKey: {
         allowNull: false,

@@ -71,116 +71,16 @@ exports.userLogin = async (req, res) => {
   }
 };
 
-exports.createTrip = async (req, res) => {
-  const { title, options } = req.body;
+exports.deleteUser = async (req, res) => {
   const userId = req.params.userId;
   try {
-    const newTrip = await trip.create({
-      title,
-      userId,
-    });
-    options.map((newOption) => {
-      const {
-        title,
-        destination,
-        budgetRangeMin,
-        budgetRangeMax,
-        startDate,
-        nights,
-        isChosen,
-        votes,
-      } = newOption;
-      const tripId = newTrip.id;
-      const addOption = option.create({
-        title,
-        destination,
-        budgetRangeMin,
-        budgetRangeMax,
-        startDate,
-        nights,
-        votes,
-        isChosen,
-        tripId,
-      });
-    });
-    res.send(newTrip);
-    res.status(200);
-  } catch (err) {
-    console.log(err);
-    res.sendStatus(500);
-  }
-};
-
-exports.getTrips = async (req, res) => {
-  try {
-    const trips = await trip.findAll({
-      include: [option],
-    });
-    res.status(200);
-    res.send(trips);
-  } catch (err) {
-    console.log(err);
-    res.sendStatus(500);
-  }
-};
-
-exports.getTrip = async (req, res) => {
-  const tripId = req.params.tripId;
-  try {
-    const trips = await trip.findAll({
+    await user.destroy({
       where: {
-        id: tripId,
-      },
-      include: [option],
-    });
-    res.status(200);
-    res.send(trips);
-  } catch (err) {
-    console.log(err);
-    res.sendStatus(500);
-  }
-};
-
-exports.createOption = async (req, res) => {
-  const {
-    title,
-    destination,
-    budgetRangeMin,
-    budgetRangeMax,
-    startDate,
-    nights,
-    isChosen,
-    tripId,
-  } = req.body;
-  try {
-    const newOption = await option.create({
-      title,
-      destination,
-      budgetRangeMin,
-      budgetRangeMax,
-      startDate,
-      nights,
-      isChosen,
-      tripId,
-    });
-    res.send(newOption);
-    res.status(200);
-  } catch (err) {
-    console.log(err);
-    res.sendStatus(500);
-  }
-};
-
-exports.addVote = async (req, res) => {
-  const optionId = req.params.optionId;
-  try {
-    const chosenOption = await option.increment('votes', {
-      where: {
-        id: optionId,
+        id: userId,
       },
     });
     res.status(200);
-    res.send(chosenOption);
+    res.send();
   } catch (err) {
     console.log(err);
     res.sendStatus(500);

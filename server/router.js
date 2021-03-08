@@ -5,32 +5,36 @@ const router = express.Router();
 const {
   getUsers,
   createUser,
-  createTrip,
-  getTrips,
-  createOption,
-  getTrip,
-  addVote,
   getUser,
   userLogin,
+  deleteUser,
 } = require('./controllers/user');
+const {
+  createTrip,
+  getTrips,
+  getTrip,
+  deleteTrip,
+} = require('./controllers/trip');
 const { createFlight, getFlights } = require('./controllers/flight');
+const { createOption, addVote } = require('./controllers/option');
 const {
   createDestination,
   getDestination,
   deleteDestinations,
 } = require('./controllers/destination');
 
-//USERS
+//Users
 router.get('/users', getUsers);
 router.post('/users', createUser);
 router.get('/users/:userId', getUser);
 router.get('/login/:emailAddress', userLogin);
+router.delete('/deleteUser/:userId', deleteUser);
 
 //Trips
 router.post('/trips/:userId', createTrip);
 router.get('/trips', getTrips); //get all trips
 router.get('/trips/:tripId', getTrip); //get specific trip according to tripId
-
+router.delete('/deleteTrip/:tripId', deleteTrip);
 //Options
 router.post('/options', createOption);
 

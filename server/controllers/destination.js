@@ -30,7 +30,7 @@ exports.getDestination = async (req, res) => {
     const selectedDesination = destinationData.map((destination) => {
       if (destination.name === destinationName) {
         requestedInfo.push(+destination.climate[month - 1].tmax);
-        requestedInfo.push(+destination.climate[month - 1].days_with_rain);
+        requestedInfo.push(+destination.climate[month - 1].sun_hours);
         requestedInfo.push(destination.img);
         //requestedInfo.push(+destination.climate[month - 1].days_with_rain);
       }
