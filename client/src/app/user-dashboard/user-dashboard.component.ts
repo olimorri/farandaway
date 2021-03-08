@@ -11,9 +11,13 @@ import { User } from '../interfaces/user';
   styleUrls: ['./user-dashboard.component.css'],
 })
 export class UserDashboardComponent implements OnInit {
-  constructor(private route: ActivatedRoute, private apiClientService: ApiClientService) { }
+  constructor(
+    private route: ActivatedRoute,
+    private apiClientService: ApiClientService,
+  ) {}
 
   user: User | undefined;
+  haveTrips: boolean = false;
 
   trips: Trip[] | undefined;
 
@@ -23,11 +27,11 @@ export class UserDashboardComponent implements OnInit {
   }
 
   getUser(id: number) {
-    this.apiClientService.getUser(id)
-      .subscribe((user) => {
-        this.user = user[0];
-        if (this.user) this.trips = this.user.trips;
-        if (!this.user) alert('hello');
-      });
+    this.apiClientService.getUser(id).subscribe((user) => {
+      this.user = user[0];
+      if (this.user) this.trips = this.user.trips;
+      //this.haveTrips = true;
+      if (!this.user) alert('User not found, please try again');
+    });
   }
 }
