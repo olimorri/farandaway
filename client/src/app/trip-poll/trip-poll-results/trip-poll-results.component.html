@@ -1,5 +1,13 @@
 <div *ngIf="trip" class="flex_col col_hor_center results_container">
   <h1 class="title_shadow">{{ trip.title }}</h1>
+  <button
+    class="btn_results_back"
+    matRipple
+    routerLink="/users/{{ userId }}"
+    routerLinkActive="active"
+  >
+    Back to trips
+  </button>
   <div class="flex_row results_bar_container">
     <app-trip-poll-bars
       [option]="secondOption"

@@ -3,6 +3,7 @@ import { ActivatedRoute } from '@angular/router';
 import { ApiClientService } from 'src/app/api-client.service';
 import { Trip } from 'src/app/interfaces/trip';
 import { TripOption } from 'src/app/interfaces/trip-option';
+import { UserInfoService } from 'src/app/user-info.service';
 
 @Component({
   selector: 'app-trip-poll-results',
@@ -13,9 +14,11 @@ export class TripPollResultsComponent implements OnInit {
   constructor(
     private apiClientService: ApiClientService,
     private route: ActivatedRoute,
+    private userInfoService: UserInfoService,
   ) {}
 
   trip: Trip | undefined;
+  userId: number | undefined;
 
   firstOption: TripOption | undefined;
   secondOption: TripOption | undefined;
@@ -24,6 +27,7 @@ export class TripPollResultsComponent implements OnInit {
   ngOnInit(): void {
     const { tripId } = this.route.snapshot.params;
     this.getTripInfo(tripId);
+    this.userId = this.userInfoService.getUserId();
   }
 
   getTripInfo(id: number) {
@@ -35,7 +39,6 @@ export class TripPollResultsComponent implements OnInit {
         this.secondOption = this.trip.options[1];
         this.thirdOption = this.trip.options[2];
       }
-      console.log(this.trip);
     });
   }
 }
