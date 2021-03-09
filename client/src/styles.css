@@ -237,6 +237,11 @@ body {
   border-bottom: 1px solid black;
 }
 
+.no_trips_message {
+  margin-top: 100px;
+  font-weight: 300;
+}
+
 .option_info {
   border-bottom: 1px solid black;
   line-height: 10px;

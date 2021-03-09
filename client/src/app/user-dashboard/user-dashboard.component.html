@@ -13,7 +13,10 @@
       Create trip
     </button>
   </div>
-  <div class="flex_col col_hor_center dashboard_trip_container">
+  <div
+    *ngIf="trips && trips.length; else noTripsBlock"
+    class="flex_col col_hor_center dashboard_trip_container"
+  >
     <div
       *ngFor="let trip of trips"
       class="flex_col col_vert_center col_hor_center dashboard_trip"
@@ -39,6 +42,9 @@
       </div>
     </div>
   </div>
+  <ng-template #noTripsBlock>
+    <app-user-dashboard-notrips></app-user-dashboard-notrips>
+  </ng-template>
 </div>
 <ng-template #noUserBlock>
   <app-user-dashboard-nouser></app-user-dashboard-nouser>

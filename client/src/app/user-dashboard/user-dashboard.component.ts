@@ -30,6 +30,7 @@ export class UserDashboardComponent implements OnInit {
     if (userLoggedIn) {
       this.getUser(userId);
       this.getInviteeTrips(userId);
+      this.haveTrips = true;
     }
   }
 
