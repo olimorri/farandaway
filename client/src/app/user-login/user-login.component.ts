@@ -27,8 +27,8 @@ export class UserLoginComponent implements OnInit {
       .subscribe((user) => {
         if (user) {
           this.userInfo.setUser(user[0]);
-          this.router.navigate([`/users/${user[0].id}`]);
           if (user[0].id) this.userInfo.changeCurrentUserId(user[0].id);
+          this.router.navigate([`/users/${user[0].id}`]);
         }
       });
   }
