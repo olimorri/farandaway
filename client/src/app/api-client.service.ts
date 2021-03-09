@@ -44,7 +44,6 @@ export class ApiClientService {
     email: string,
     tripId: number,
   ): Observable<Invitee> {
-    console.log(userId, email, tripId);
     const url = `${this.baseUrl}/addFriend/${tripId}`;
     const userInfo = { emailAddress: email, userId: userId };
     const body = JSON.parse(JSON.stringify(userInfo));

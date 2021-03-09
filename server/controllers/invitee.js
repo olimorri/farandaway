@@ -36,7 +36,6 @@ exports.getInviteeTrips = async (req, res) => {
     });
     inviteeTrips.map((trip) => {
       const tripId = trip.id;
-      console.log(tripId);
       const selectedTrip = () => {
         trip.findAll({
           where: {
