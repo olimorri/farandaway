@@ -1,6 +1,6 @@
 'use-strict';
 
-const { user, trip, option } = require('../models');
+const { user, trip, option, invitee } = require('../models');
 
 exports.createUser = async (req, res) => {
   const { emailAddress, firstName, lastName, password } = req.body;
@@ -22,7 +22,12 @@ exports.createUser = async (req, res) => {
 exports.getUsers = async (req, res) => {
   try {
     const users = await user.findAll({
-      include: { model: trip, include: { model: option } },
+      include: [
+        {
+          model: trip,
+          include: [{ model: invitee }, { model: option }],
+        },
+      ],
       // include: { model: trip, required: true, include: {model: option} } - this is the option for retrieving only users that include trips
     });
     res.status(200);
@@ -41,10 +46,12 @@ exports.getUser = async (req, res) => {
       where: {
         id: userId,
       },
-      include: {
-        model: trip,
-        include: { model: option },
-      },
+      include: [
+        {
+          model: trip,
+          include: [{ model: invitee }, { model: option }],
+        },
+      ],
     });
     res.status(200);
     res.send(users);

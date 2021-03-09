@@ -4,10 +4,14 @@ module.exports = (sequelize, DataTypes) => {
       type: DataTypes.STRING,
       allowNull: false,
     },
+    userId: {
+      type: DataTypes.INTEGER,
+      allowNull: true,
+    },
   });
 
   Invitee.associate = (model) => {
-    Invitee.belongsTo(model.user, {
+    Invitee.belongsTo(model.trip, {
       foreignKey: {
         allowNull: false,
       },

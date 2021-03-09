@@ -1,7 +1,6 @@
 'use-strict';
 
-const { trip } = require('../models');
-const { option } = require('../models');
+const { trip, option, invitee } = require('../models');
 
 exports.createTrip = async (req, res) => {
   const { title, options } = req.body;
@@ -46,7 +45,13 @@ exports.createTrip = async (req, res) => {
 exports.getTrips = async (req, res) => {
   try {
     const trips = await trip.findAll({
-      include: [option],
+      include: [
+        { model: invitee },
+        {
+          model: option,
+          // model: invitee,
+        },
+      ],
     });
     res.status(200);
     res.send(trips);

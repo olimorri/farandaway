@@ -22,6 +22,7 @@ const {
   getDestination,
   deleteDestinations,
 } = require('./controllers/destination');
+const { addInvitee, getInviteeTrips } = require('./controllers/invitee');
 
 //Users
 router.get('/users', getUsers);
@@ -49,5 +50,9 @@ router.get('/flights', getFlights);
 router.post('/destinations', createDestination);
 router.get('/additionalInfo/:destinationName/:startDate', getDestination);
 router.delete('/destinations', deleteDestinations);
+
+//Invitees
+router.post('/addFriend/:tripId', addInvitee);
+router.get('/inviteeTrips/:userId', getInviteeTrips);
 
 module.exports = router;

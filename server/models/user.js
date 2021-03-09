@@ -19,7 +19,9 @@ module.exports = (sequelize, DataTypes) => {
   });
 
   User.associate = (model) => {
-    User.hasMany(model.trip); //trip - this always needs to be the lowercase name
+    User.hasMany(model.trip);
+    // User.hasOne(model.trip, { as: 'owner' }); //trip - this always needs to be the lowercase name
+    // User.hasMany(model.trip, { as: 'invited' });
   };
 
   return User;

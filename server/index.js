@@ -2,7 +2,7 @@
 
 const express = require('express');
 const app = new express();
-const cors = require('cors')
+const cors = require('cors');
 
 const db = require('./models/index');
 const router = require('./router');
@@ -15,8 +15,8 @@ app.use(router);
 (async function () {
   try {
     app.listen(PORT, () => {
-      console.log(`Server running at http://localhost:${PORT} 🚀😍`)
-    })
+      console.log(`Server running at http://localhost:${PORT} 🚀😍`);
+    });
     try {
       await db.sequelize.authenticate();
       await db.sequelize.sync();
@@ -25,6 +25,6 @@ app.use(router);
       console.error('Unable to connect to the database:', error);
     }
   } catch (err) {
-    console.log(err)
+    console.log(err);
   }
-}) ();
+})();
