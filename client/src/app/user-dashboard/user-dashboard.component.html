@@ -1,4 +1,4 @@
-<div *ngIf="user" class="flex_col col_hor_center">
+<div *ngIf="user; else noUserBlock" class="flex_col col_hor_center">
   <div class="flex_col col_hor_center dashboard_header">
     <h1 class="trip_title">Hello {{ user.firstName }}</h1>
     <p class="trip_subtitle text_center">
@@ -40,3 +40,6 @@
     </div>
   </div>
 </div>
+<ng-template #noUserBlock>
+  <h1>Hello</h1>
+</ng-template>

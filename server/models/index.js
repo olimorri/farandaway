@@ -24,12 +24,11 @@ fs.readdirSync(__dirname)
     );
   })
   .forEach((file) => {
-    // ['student.js']
     const model = require(path.join(__dirname, file))(
       sequelize,
       Sequelize.DataTypes,
     );
-    db[model.name] = model; // {Student: Model}
+    db[model.name] = model;
   });
 
 Object.keys(db).forEach((modelName) => {

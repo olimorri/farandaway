@@ -4,7 +4,7 @@ import { ApiClientService } from '../api-client.service';
 
 import { Trip } from '../interfaces/trip';
 import { User } from '../interfaces/user';
-import { TripInfoService } from '../trip-info.service';
+import { UserInfoService } from '../user-info.service';
 
 @Component({
   selector: 'app-user-dashboard',
@@ -15,7 +15,7 @@ export class UserDashboardComponent implements OnInit {
   constructor(
     private route: ActivatedRoute,
     private apiClientService: ApiClientService,
-    private tripInfoService: TripInfoService,
+    private userInfoService: UserInfoService,
   ) {}
 
   user: User | undefined;
@@ -25,8 +25,12 @@ export class UserDashboardComponent implements OnInit {
 
   ngOnInit(): void {
     const { userId } = this.route.snapshot.params;
-    this.getUser(userId);
-    this.getInviteeTrips(userId);
+    //performs a check to see if user is logged in, if so => get the user and trips
+    const userLoggedIn = this.userInfoService.getUserId();
+    if (userLoggedIn) {
+      this.getUser(userId);
+      this.getInviteeTrips(userId);
+    }
   }
 
   getUser(id: number) {
