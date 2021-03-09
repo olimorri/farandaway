@@ -31,8 +31,8 @@ export class UserSignupComponent implements OnInit {
       password: this.password,
     };
     this.apiClientService.userSignUp(newUser).subscribe((user) => {
-      this.userInfo.setUser(user);
-      this.router.navigate(['/trips']);
+      const newUser = this.userInfo.setUser(user);
+      this.router.navigate([`/users/${newUser.id}`]);
     });
   }
 }

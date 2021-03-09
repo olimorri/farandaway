@@ -21,6 +21,7 @@ import { UserSignupComponent } from './user-signup/user-signup.component';
 import { TripPollResultsComponent } from './trip-poll/trip-poll-results/trip-poll-results.component';
 import { UserDashboardTripComponent } from './user-dashboard/user-dashboard-trip/user-dashboard-trip.component';
 import { TripPollBarsComponent } from './trip-poll/trip-poll-bars/trip-poll-bars.component';
+import { UserDashboardNouserComponent } from './user-dashboard/user-dashboard-nouser/user-dashboard-nouser.component';
 
 @NgModule({
   declarations: [
@@ -39,6 +40,7 @@ import { TripPollBarsComponent } from './trip-poll/trip-poll-bars/trip-poll-bars
     TripPollResultsComponent,
     UserDashboardTripComponent,
     TripPollBarsComponent,
+    UserDashboardNouserComponent,
   ],
   imports: [
     BrowserModule,

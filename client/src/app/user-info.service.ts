@@ -23,6 +23,7 @@ export class UserInfoService {
   }
 
   setUser(user: User) {
+    if (user.id) this.changeCurrentUserId(user.id);
     return (this.user = user);
   }
 }
