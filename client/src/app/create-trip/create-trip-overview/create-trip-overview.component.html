@@ -2,7 +2,7 @@
   <div>
     <h1 class="trip_title">{{ tripTitle }}</h1>
   </div>
-  <div class="flex_col col_hor_center col_vert_center">
+  <div class="flex_col col_hor_center col_vert_center options_outer_container">
     <app-create-trip-option
       *ngFor="let optionTitle of tripOptionTitles"
       class="trip_option_container_small text_center"
@@ -10,5 +10,7 @@
       (newTripOptionEvent)="addTripOption($event)"
     ></app-create-trip-option>
   </div>
-  <button class="btn_medium" matRipple (click)="postTrip()">Create Trip</button>
+  <button class="btn_medium create_trip" matRipple (click)="postTrip()">
+    Create Trip
+  </button>
 </div>

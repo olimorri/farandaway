@@ -50,20 +50,6 @@ body {
   margin-right: 40px;
 }
 
-.btn_medium {
-  background-color: #ff6a56;
-  outline: none;
-  border-radius: 15px;
-  border: none;
-  padding: 15px 15px;
-  margin-top: 20px;
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-  font-weight: 700;
-  letter-spacing: 0.2px;
-  font-size: 18px;
-  color: white;
-}
-
 .btn_small {
   background-color: #ff6a56;
   outline: none;
@@ -75,6 +61,20 @@ body {
   font-weight: 700;
   letter-spacing: 0.2px;
   font-size: 14px;
+  color: white;
+}
+
+.btn_medium {
+  background-color: #ff6a56;
+  outline: none;
+  border-radius: 15px;
+  border: none;
+  padding: 15px 15px;
+  margin: 20px;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  font-weight: 700;
+  letter-spacing: 0.2px;
+  font-size: 18px;
   color: white;
 }
 
@@ -133,6 +133,11 @@ body {
 
 .col_vert_center {
   justify-content: center;
+}
+
+.create_trip {
+  width: 305px;
+  margin: 20px auto;
 }
 
 .dashboard_header {
@@ -355,6 +360,11 @@ p {
   text-align: center;
 }
 
+.options_outer_container {
+  max-width: 80%;
+  margin: auto;
+}
+
 .trip_option_container_small {
   border-radius: 15px;
   background: #ffffff;
@@ -393,6 +403,8 @@ p {
   text-align: center;
   margin-left: -10px;
   margin-right: -10px;
+  margin-top: -15px;
+  border-radius: 15px 15px 0px 0px;
 }
 
 .trip_option_label_large {

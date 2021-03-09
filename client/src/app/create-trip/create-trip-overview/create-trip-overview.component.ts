@@ -2,6 +2,7 @@ import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { Router } from '@angular/router';
 import { ApiClientService } from '../../api-client.service';
 import { TripOption } from '../../interfaces/trip-option';
+import { UserInfoService } from '../../user-info.service';
 
 @Component({
   selector: 'app-create-trip-overview',
@@ -21,6 +22,7 @@ export class CreateTripOverviewComponent implements OnInit {
   constructor(
     private apiClientService: ApiClientService,
     private router: Router,
+    private userInfoService: UserInfoService,
   ) {}
 
   ngOnInit(): void {}
@@ -29,7 +31,8 @@ export class CreateTripOverviewComponent implements OnInit {
     const trip = { title: this.tripTitle, options: this.tripOptions };
     this.apiClientService.postTrip(trip).subscribe((created) => {
       const tripId = created.id;
-      this.router.navigate([`/trips/${tripId}`]);
+      const userId = this.userInfoService.getUserId();
+      this.router.navigate([`/users/${userId}`]);
     });
   }
 
