@@ -229,6 +229,10 @@ body {
   width: 50%;
 }
 
+.header_logo {
+  color: #ff6a56;
+}
+
 .header_nav {
   justify-content: space-between;
   align-items: center;
@@ -257,6 +261,15 @@ body {
   width: 100%;
   margin-top: -16px;
   border-bottom: 1px solid black;
+}
+
+.landing_page {
+  height: 90vh;
+  color: white;
+  background-image: url('https://images.unsplash.com/photo-1483683804023-6ccdb62f86ef?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=2775&q=80');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 .no_trips_message {
@@ -457,4 +470,8 @@ p {
   overflow: auto;
   width: 242vw;
   padding: 10px 20px;
+}
+
+::-webkit-scrollbar {
+  display: none;
 }

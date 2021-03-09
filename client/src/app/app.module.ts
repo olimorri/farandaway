@@ -26,6 +26,7 @@ import { UserDashboardNotripsComponent } from './user-dashboard/user-dashboard-n
 import { HeaderBurgerComponent } from './header/header-burger/header-burger.component';
 import { UserDashboardDialogButtonComponent } from './user-dashboard/user-dashboard-dialog-button/user-dashboard-dialog-button.component';
 import { UserDashboardDialogInputComponent } from './user-dashboard/user-dashboard-dialog-input/user-dashboard-dialog-input.component';
+import { LandingPageComponent } from './landing-page/landing-page.component';
 
 @NgModule({
   declarations: [
@@ -49,6 +50,7 @@ import { UserDashboardDialogInputComponent } from './user-dashboard/user-dashboa
     HeaderBurgerComponent,
     UserDashboardDialogButtonComponent,
     UserDashboardDialogInputComponent,
+    LandingPageComponent,
   ],
   imports: [
     BrowserModule,

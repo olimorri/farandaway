@@ -6,6 +6,7 @@ import { UserDashboardComponent } from './user-dashboard/user-dashboard.componen
 import { UserLoginComponent } from './user-login/user-login.component';
 import { UserSignupComponent } from './user-signup/user-signup.component';
 import { TripPollResultsComponent } from './trip-poll/trip-poll-results/trip-poll-results.component';
+import { LandingPageComponent } from './landing-page/landing-page.component';
 const routes: Routes = [
   { path: 'trips/results/:tripId', component: TripPollResultsComponent },
   { path: 'users/:userId', component: UserDashboardComponent },
@@ -13,7 +14,7 @@ const routes: Routes = [
   { path: 'signup', component: UserSignupComponent },
   { path: 'login', component: UserLoginComponent },
   { path: 'trips', component: CreateTripComponent },
-  { path: '', component: CreateTripComponent },
+  { path: '', component: LandingPageComponent },
 ];
 
 @NgModule({
