@@ -13,13 +13,6 @@
     </button>
   </div>
   <ng-template #signedInBlock>
-    <button
-      matRipple
-      class="btn_header"
-      routerLink="/users/{{ userId }}"
-      routerLinkActive="active"
-    >
-      Account
-    </button>
+    <app-header-burger [userId]="userId"></app-header-burger>
   </ng-template>
 </div>

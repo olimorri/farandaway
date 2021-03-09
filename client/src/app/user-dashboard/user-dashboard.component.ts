@@ -38,8 +38,6 @@ export class UserDashboardComponent implements OnInit {
     this.apiClientService.getUser(id).subscribe((user) => {
       this.user = user[0];
       if (this.user) this.trips = this.user.trips;
-      //this.tripInfoService.setTrip(this.trips);
-      //this.haveTrips = true;
       if (!this.user) alert('User not found, please try again');
     });
   }

@@ -23,6 +23,7 @@ import { UserDashboardTripComponent } from './user-dashboard/user-dashboard-trip
 import { TripPollBarsComponent } from './trip-poll/trip-poll-bars/trip-poll-bars.component';
 import { UserDashboardNouserComponent } from './user-dashboard/user-dashboard-nouser/user-dashboard-nouser.component';
 import { UserDashboardNotripsComponent } from './user-dashboard/user-dashboard-notrips/user-dashboard-notrips.component';
+import { HeaderBurgerComponent } from './header/header-burger/header-burger.component';
 
 @NgModule({
   declarations: [
@@ -43,6 +44,7 @@ import { UserDashboardNotripsComponent } from './user-dashboard/user-dashboard-n
     TripPollBarsComponent,
     UserDashboardNouserComponent,
     UserDashboardNotripsComponent,
+    HeaderBurgerComponent,
   ],
   imports: [
     BrowserModule,

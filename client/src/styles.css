@@ -39,6 +39,10 @@ body {
   color: white;
 }
 
+.btn_burger {
+  margin-right: 40px;
+}
+
 .btn_medium {
   background-color: #ff6a56;
   outline: none;
