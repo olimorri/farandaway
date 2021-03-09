@@ -8,6 +8,7 @@ const {
   getUser,
   userLogin,
   deleteUser,
+  getUserId,
 } = require('./controllers/user');
 const {
   createTrip,
@@ -30,6 +31,7 @@ router.post('/users', createUser);
 router.get('/users/:userId', getUser);
 router.get('/login/:emailAddress', userLogin);
 router.delete('/deleteUser/:userId', deleteUser);
+router.get('/getUserId', getUserId);
 
 //Trips
 router.post('/trips/:userId', createTrip);

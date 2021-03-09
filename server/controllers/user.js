@@ -61,6 +61,26 @@ exports.getUser = async (req, res) => {
   }
 };
 
+exports.getUserId = async (req, res) => {
+  const emailAddress = req.headers.emailaddress;
+  const selectedUserId = [];
+  try {
+    const selectedUser = await user.findAll({
+      where: {
+        emailAddress: emailAddress,
+      },
+    });
+    selectedUser.map((user) => {
+      selectedUserId.push(user.id);
+    });
+    res.send(selectedUserId);
+    res.status(200);
+  } catch (err) {
+    console.log(err);
+    res.sendStatus(500);
+  }
+};
+
 exports.userLogin = async (req, res) => {
   const { password } = req.headers;
   const { emailAddress } = req.params;
