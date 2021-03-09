@@ -6,6 +6,7 @@ import { Trip } from './interfaces/trip';
 import { CreateTripResponse } from './interfaces/create-trip-response';
 import { AdditionalTripInfo } from './interfaces/additional-trip-info';
 import { User } from './interfaces/user';
+import { Invitee } from './interfaces/invitee';
 
 @Injectable({
   providedIn: 'root',
@@ -27,9 +28,30 @@ export class ApiClientService {
     return this.http.get<User[]>(url);
   }
 
+  getUserId(email: string): Observable<any> {
+    const url = `${this.baseUrl}/getUserId`;
+    const headers = { emailAddress: JSON.parse(JSON.stringify(email)) };
+    return this.http.get<any>(url, { headers });
+  }
+
   getInviteeTrips(id: number): Observable<Trip[]> {
     const url: string = `${this.baseUrl}/inviteeTrips/${id}`;
     return this.http.get<Trip[]>(url);
+  }
+
+  addInvitee(
+    userId: number,
+    email: string,
+    tripId: number,
+  ): Observable<Invitee> {
+    console.log(userId, email, tripId);
+    const url = `${this.baseUrl}/addFriend/${tripId}`;
+    const userInfo = { emailAddress: email, userId: userId };
+    const body = JSON.parse(JSON.stringify(userInfo));
+    const headers = {
+      'Content-Type': 'application/json',
+    };
+    return this.http.post<Invitee>(url, body, { headers });
   }
 
   userLogin(email: string, password: string): Observable<User[]> {

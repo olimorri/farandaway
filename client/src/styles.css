@@ -39,6 +39,13 @@ body {
   color: white;
 }
 
+.btn_send {
+  outline: none;
+  border: none;
+  background-color: transparent;
+  margin-bottom: 5px;
+}
+
 .btn_burger {
   margin-right: 40px;
 }
@@ -135,6 +142,12 @@ body {
 
 .dashboard_trip_container {
   width: 80%;
+}
+
+.dashboard_trip_header {
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
 }
 
 .dashboard_trip {

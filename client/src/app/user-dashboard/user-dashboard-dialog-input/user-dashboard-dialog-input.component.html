@@ -1,0 +1,12 @@
+<h1 mat-dialog-title class="text_center">Trips are better with friends 💂‍♂️💂‍♂️</h1>
+<div mat-dialog-content>
+  <p class="text-center">Add your friends email address to invite them!</p>
+  <mat-form-field>
+    <mat-label>Email</mat-label>
+    <input matInput [(ngModel)]="data.email" />
+  </mat-form-field>
+</div>
+<div mat-dialog-actions>
+  <button mat-button (click)="onNoClick()">No Thanks</button>
+  <button mat-button [mat-dialog-close]="data.email" cdkFocusInitial>Ok</button>
+</div>

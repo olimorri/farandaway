@@ -24,6 +24,8 @@ import { TripPollBarsComponent } from './trip-poll/trip-poll-bars/trip-poll-bars
 import { UserDashboardNouserComponent } from './user-dashboard/user-dashboard-nouser/user-dashboard-nouser.component';
 import { UserDashboardNotripsComponent } from './user-dashboard/user-dashboard-notrips/user-dashboard-notrips.component';
 import { HeaderBurgerComponent } from './header/header-burger/header-burger.component';
+import { UserDashboardDialogButtonComponent } from './user-dashboard/user-dashboard-dialog-button/user-dashboard-dialog-button.component';
+import { UserDashboardDialogInputComponent } from './user-dashboard/user-dashboard-dialog-input/user-dashboard-dialog-input.component';
 
 @NgModule({
   declarations: [
@@ -45,6 +47,8 @@ import { HeaderBurgerComponent } from './header/header-burger/header-burger.comp
     UserDashboardNouserComponent,
     UserDashboardNotripsComponent,
     HeaderBurgerComponent,
+    UserDashboardDialogButtonComponent,
+    UserDashboardDialogInputComponent,
   ],
   imports: [
     BrowserModule,

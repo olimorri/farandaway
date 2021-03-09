@@ -21,8 +21,14 @@
       *ngFor="let trip of trips"
       class="flex_col col_vert_center col_hor_center dashboard_trip"
     >
-      <div class="dashboard_trip_title">
-        <h4>{{ trip.title }}</h4>
+      <div class="flex_row dashboard_trip_header">
+        <div class="dashboard_trip_title">
+          <h4>{{ trip.title }}</h4>
+        </div>
+        <app-user-dashboard-dialog-button
+          class="btn_send"
+          [tripId]="trip.id"
+        ></app-user-dashboard-dialog-button>
       </div>
       <div class="flex_row dashboard_trip_info_buttons">
         <button
