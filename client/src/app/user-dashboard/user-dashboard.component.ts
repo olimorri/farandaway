@@ -26,6 +26,7 @@ export class UserDashboardComponent implements OnInit {
   ngOnInit(): void {
     const { userId } = this.route.snapshot.params;
     this.getUser(userId);
+    this.getInviteeTrips(userId);
   }
 
   getUser(id: number) {
@@ -35,6 +36,14 @@ export class UserDashboardComponent implements OnInit {
       //this.tripInfoService.setTrip(this.trips);
       //this.haveTrips = true;
       if (!this.user) alert('User not found, please try again');
+    });
+  }
+
+  getInviteeTrips(id: number) {
+    this.apiClientService.getInviteeTrips(id).subscribe((trip) => {
+      trip.map((singleTrip) => {
+        this.trips?.push(singleTrip);
+      });
     });
   }
 }

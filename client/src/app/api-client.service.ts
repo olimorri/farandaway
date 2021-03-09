@@ -27,6 +27,11 @@ export class ApiClientService {
     return this.http.get<User[]>(url);
   }
 
+  getInviteeTrips(id: number): Observable<Trip[]> {
+    const url: string = `${this.baseUrl}/inviteeTrips/${id}`;
+    return this.http.get<Trip[]>(url);
+  }
+
   userLogin(email: string, password: string): Observable<User[]> {
     const url = `${this.baseUrl}/login/${email}`;
     const headers = { password };
