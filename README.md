@@ -6,6 +6,21 @@ Make organising a group trip easier. Setup your trip, add up to three different 
 
 For each option you'll get the cheapest return flights for the dates specified, as well as other destination-related information, such as average temperature and hours of sun.
 
+## Tech Stack
+
+### Frontend
+
+- [Angular](https://angular.io/)
+- [Typescript](https://www.typescriptlang.org/)
+
+### Backend
+- [PostgreSQL](https://www.postgresql.org/)
+- [Sequelize](https://sequelize.org/master/)
+- [Express](https://expressjs.com/)
+
+### Design
+- [Figma](https://www.figma.com/)
+
 ## Getting Started
 
 These instructions will help you to setup a local development instance of the application.
@@ -29,15 +44,3 @@ To get the app up and running you'll need to run the following commands from you
 Client: `ng serve`
 
 Server: `npm run start`
-
-## Tech Stack
-
-### Frontend
-
-- [Angular](https://angular.io/)
-- [Typescript](https://www.typescriptlang.org/)
-
-### Backend
-- [PostgreSQL](https://www.postgresql.org/)
-- [Sequelize](https://sequelize.org/master/)
-- [Express](https://expressjs.com/)
