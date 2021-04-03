@@ -1,4 +1,4 @@
-# farandaway
+# far&away
 
 ## Features
 
