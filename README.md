@@ -1,4 +1,5 @@
 # far&away
+![><](https://github.com/olimorri/farandaway/blob/main/far%26awaytextlogo.png)
 
 ## Features
 
