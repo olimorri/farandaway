@@ -2,7 +2,7 @@
 
 ## Features
 
-Make organising a group trip easier. Setup your trip, add up to three different combinations of destinations/dates and invite your friends to vote for their favourite.
+Make organising a group trip easier! Setup your trip, add up to three different combinations of destinations/dates and invite your friends to vote for their favourite.
 
 For each option you'll get the cheapest return flights for the dates you specify, as well as other destination-related information, such as average temperature and hours of sun.
 
