@@ -2,9 +2,16 @@
 
 ## Features
 
+![><](https://github.com/olimorri/farandaway/blob/main/assets/herov2.jpg)
+
 Make organising a group trip easier! Setup your trip, add up to three different combinations of destinations/dates and invite your friends to vote for their favourite.
 
 For each option you'll get the cheapest return flights for the dates you specify, as well as other destination-related information, such as average temperature and hours of sun.
+
+<p float="left" align="center">
+  <img src="https://github.com/olimorri/farandaway/blob/main/assets/FAR%26AWAY_DEVICES_02.jpg" width="49%"/>
+  <img src="https://github.com/olimorri/farandaway/blob/main/assets/FAR%26AWAY_DEVICES_03.jpg" width="49%"/> 
+</p>
 
 ## Tech Stack
 
