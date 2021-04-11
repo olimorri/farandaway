@@ -1,4 +1,4 @@
-![><](https://github.com/olimorri/farandaway/blob/main/far%26awaytextlogo.png)
+![><](https://github.com/olimorri/farandaway/blob/main/assets/FAR%26AWAYLOGO.png)
 
 ## Features
 
