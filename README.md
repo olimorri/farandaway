@@ -30,7 +30,7 @@ For each option you'll get the cheapest return flights for the dates you specify
 
 ## Getting Started
 
-These instructions will help you to setup a local development instance of the application.
+These instructions will help you to setup a local development instance of the application
 
 ### Get the repo
 
